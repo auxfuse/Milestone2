@@ -1,0 +1,70 @@
+/* Global Styles */
+
+body {
+    font-family: 'Bangers', sans-serif;
+}
+
+/* Modal */
+
+.modal-header, .modal-body {
+    background-color: #000000;
+}
+
+    /* Modal title and close button */
+.modal-title {
+    color: #44ff78;
+}
+
+.close {
+    color: #00dde2;
+    text-shadow: 0 2px 0 #ffffff;
+}
+
+    /* Modal header */
+.fa-keyboard {
+    padding: 0 5px;
+}
+
+    /* Modal user instructions */
+.instructions-header {
+    font-size: 1.2rem;
+    color: #44ff78;
+    text-decoration: underline;
+    margin: 5px auto;
+}
+
+.instructions-list {
+    padding: 0;
+}
+
+.instructions-list-item {
+    font-size: 1rem;
+    color: #00dde2;
+    list-style: none;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+.dropdown-selection {
+    text-align: center;
+}
+
+.category-dropdown {
+    color: #44ff78;
+    background-color: #000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #00dde2;
+    border-radius: 0;
+}
+
+    /* Start button */
+.start-btn {
+    justify-content: center;
+}
+
+.btn-success {
+    background-color: #44ff78;
+    color: #000000;
+}
