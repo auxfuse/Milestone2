@@ -6,13 +6,28 @@ body {
 
 /* Modal */
 
+    /* Modal content is essentially the background plate, use of border-radius to create efficient UI */
+.modal-content {
+    background-color: #000000;
+    margin: 150px auto 0;
+    border: 1px solid #44ff78;
+    border-radius: 0.8rem;
+}
+
+    /* Removed border styles from header & body of modal in order for modal-content border style to create seemless body affect */
 .modal-header, .modal-body {
     background-color: #000000;
+    border-radius: 0.8rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
 }
 
     /* Modal title and close button */
 .modal-title {
     color: #44ff78;
+    border-bottom: 1px solid #44ff78;
 }
 
 .close {
