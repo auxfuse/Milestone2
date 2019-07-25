@@ -68,3 +68,32 @@ body {
     background-color: #44ff78;
     color: #000000;
 }
+
+/* Header */
+
+.bg-custom {
+    background-color: #000000;
+}
+
+.navbar-brand img {
+    width: 75px;
+    height: 75px;
+    padding: 5px;
+}
+
+.navbar ul li a {
+    font-size: 1.2rem;
+}
+
+.active a {
+    color: #00dde2 !important;
+}
+
+.navbar ul li a:hover{
+    color: #00dde2 !important;
+}
+
+.fa-gamepad, .fa-cogs {
+    color: #00dde2;
+    padding: 0 5px;
+}

@@ -14,6 +14,34 @@
 
 </head>
 <body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord Logo">
+            </a>
+            <!-- Game Name -->
+            <div class="game-name">
+                <p>Keyword!</p>
+            </div>
+            <!-- Toggler Icon on mobile view -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="resetGame">Game<i class="fas fa-gamepad"></i><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="settings" onclick="openModal()">Settings<i class="fas fa-cogs"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
 <!-- onPage Load Modal Popup -->
     <div class="modal" tabindex="-1" role="dialog" id="openingSettings">
