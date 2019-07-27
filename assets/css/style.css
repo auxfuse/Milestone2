@@ -6,8 +6,39 @@ body {
 }
 
     /* Default background while selection is blank */
-.default-background {
+.default-bg {
     background: linear-gradient(to bottom, #000000 0%, #000000 21%, #00dde2 100%);
+}
+
+    /* Background classes based on selection dropdown */
+.pokemon-bg {
+    background: url("../img/pokemon-bg.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.comicbook-bg {
+    background: url("../img/comicbook-bg.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.cars-bg {
+    background: url("../img/cars-bg.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.nature-bg {
+    background: url("../img/nature-bg.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.city-bg {
+    background: url("../img/city.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
 }
 
 /* Modal */
