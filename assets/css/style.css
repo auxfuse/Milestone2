@@ -3,7 +3,10 @@
 body {
     font-family: 'Bangers', sans-serif;
     height: 100vh;
+}
+
     /* Default background while selection is blank */
+.default-background {
     background: linear-gradient(to bottom, #000000 0%, #000000 21%, #00dde2 100%);
 }
 
