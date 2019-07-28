@@ -43,15 +43,20 @@
 <!-- Game board -->
     <div class="container game">
         <section class="row">
-            <div class="col-sm-12 col-md-6 mx-auto game-board">
-                <p class="theme-text">Your theme and themed words are <span class="theme-span">$themeName</span> related!</p>
-                <p class="diff-text">Difficulty selected is <span class="diff-span">$difficulty</span>.</p>
-                <p class="shown-word" id="show-word">word</p>
-                <p class="tooltip">Type the word shown in the given time to gain a point....if you fail, GAME OVER!</p>
-                <input type="text" class="form-control" id="user-input" placeholder="Type word shown!" autofocus>
+            <div class="col-md-8 mx-auto game-board">
+                <p class="theme-text text-center">Your theme and themed words are <span class="theme-span">$themeName</span> related!</p>
+                <p class="diff-text text-center">Difficulty selected is <span class="diff-span">$difficulty</span>.</p>
+                <div class="shown-word-group text-center">
+                    <span class="shown-word-label">Word to Match: </span><span class="shown-word" id="show-word">word</span>
+                </div>
+                <div class="form-group center-form game-input">
+                    <input type="text" class="form-control" id="user-input" placeholder="Type word shown!" autofocus>
+                </div>
+                <p class="text-center tool-tip">Match the word shown in the given time....or GAME OVER!!</p>
             </div>
         </section>
     </div>
+
 <!-- onPage Load Modal Popup -->
     <div class="modal" tabindex="-1" role="dialog" id="openingSettings">
         <div class="modal-dialog" role="document">

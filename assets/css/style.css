@@ -51,7 +51,7 @@ body {
     border-radius: 0.8rem;
 }
 
-    /* Removed border styles from header & body of modal in order for modal-content border style to create seemless body affect */
+    /* Removed border styles from header & body of modal in order for modal-content border style to create seamless body affect */
 .modal-header, .modal-body {
     background-color: #000000;
     border-radius: 0.8rem;
@@ -155,12 +155,47 @@ body {
 .game {
     position: relative;
     height: 100%;
-    width: 100%
+    width: 100%;
 }
 
+    /* Game board centered using absolute and transform translate properties to manipulate it
+    out of the natural DOM position */
 .game-board {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #000000;
+    padding: 20px;
+    border: 1px solid #44ff78;
+    border-radius: 0.8rem;
+}
+
+.theme-text, .diff-text, .shown-word-label {
+    font-size: 1.5rem;
+    color: #00dde2;
+}
+
+    /* Padding bottom used to create additional spacing between word shown and input field for user */
+.shown-word-group {
+    padding-bottom: 20px;
+}
+
+.shown-word {
+    font-size: 2.2rem;
+    text-decoration: underline;
+    color: #44ff78;
+}
+    /* Form control centered via margin: 0 auto and placeholder and input text centered */
+.form-control {
+    width: 65%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.tool-tip {
+    font-size: 1.1rem;
+    color: #7f909a;
+    font-style: italic;
+    letter-spacing: 0.15rem;
 }
