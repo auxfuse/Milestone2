@@ -43,12 +43,15 @@
 <!-- Game board -->
     <div class="container game">
         <section class="row">
+            <!-- Game board componentry -->
             <div class="col-md-8 mx-auto game-board">
                 <p class="theme-text text-center">Your theme and themed words are <span class="theme-span">$themeName</span> related!</p>
                 <p class="diff-text text-center">Difficulty selected is <span class="diff-span">$difficulty</span>.</p>
+                <!-- Inline elements such as <span> to simulate label, and field to show text to user -->
                 <div class="shown-word-group text-center">
                     <span class="shown-word-label">Word to Match: </span><span class="shown-word" id="show-word">word</span>
                 </div>
+                <!-- Input field for user to match word, and for JS to check against word shown -->
                 <div class="form-group center-form game-input">
                     <input type="text" class="form-control" id="user-input" placeholder="Type word shown!" autofocus>
                 </div>
@@ -73,6 +76,7 @@
                             <p class="text-center">Instructions:</p>
                         </div>
                         <div class="form-group">
+                            <!-- Basic set of instructions for user before game start -->
                             <ul class="instructions-list">
                                 <li class="instructions-list-item text-center">Match the word shown to score a point before the timer runs out.</li>
                                 <li class="instructions-list-item text-center">The three difficulties are:</li>
@@ -82,6 +86,7 @@
                             </ul>
                         </div>
                         <div class="form-group dropdown-selection">
+                            <!-- Dropdown list with values set to determine game difficulty -->
                             <select class="custom-select mr-sm-2 w-50 category-dropdown" id="difficulty" required="">
                                 <option value="">Select Difficulty!</option>
                                 <option value="easy">Easy</option>
@@ -90,6 +95,7 @@
                             </select>
                         </div>
                         <div class="form-group dropdown-selection">
+                            <!-- Dropdown list with values set to determine game theme and themed array to populate potential words for user to match -->
                             <select class="custom-select mr-sm-2 w-50 category-dropdown" id="theme" required="" onchange="changeBackground()">
                                 <option value="">Select Theme!</option>
                                 <option value="pokemon">Pokemon</option>
