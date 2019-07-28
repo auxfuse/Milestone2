@@ -41,10 +41,17 @@
     </header>
 
 <!-- Game board -->
-    <section class="game-board">
-
-    </section>
-
+    <div class="container game">
+        <section class="row">
+            <div class="col-sm-12 col-md-6 mx-auto game-board">
+                <p class="theme-text">Your theme and themed words are <span class="theme-span">$themeName</span> related!</p>
+                <p class="diff-text">Difficulty selected is <span class="diff-span">$difficulty</span>.</p>
+                <p class="shown-word" id="show-word">word</p>
+                <p class="tooltip">Type the word shown in the given time to gain a point....if you fail, GAME OVER!</p>
+                <input type="text" class="form-control" id="user-input" placeholder="Type word shown!" autofocus>
+            </div>
+        </section>
+    </div>
 <!-- onPage Load Modal Popup -->
     <div class="modal" tabindex="-1" role="dialog" id="openingSettings">
         <div class="modal-dialog" role="document">

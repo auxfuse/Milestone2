@@ -149,3 +149,18 @@ body {
     color: #00dde2;
     padding: 0 5px;
 }
+
+/* Game board */
+
+.game {
+    position: relative;
+    height: 100%;
+    width: 100%
+}
+
+.game-board {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
