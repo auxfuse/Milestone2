@@ -45,21 +45,21 @@
         <section class="row">
             <!-- Game board componentry -->
             <div class="col-md-8 mx-auto game-board">
-                <p class="theme-text text-center">Your theme and themed words are <span class="theme-span">$themeName</span> related!</p>
-                <p class="diff-text text-center">Difficulty selected is <span class="diff-span">$difficulty</span>.</p>
+                <p class="theme-text text-center">Your theme and themed words are <span class="theme-span" id="theme-span">$themeName</span> related!</p>
+                <p class="diff-text text-center">Difficulty selected is <span class="diff-span" id="diff-span">$difficulty</span>.</p>
                 <!-- Inline elements such as <span> to simulate label, and field to show text to user -->
                 <div class="shown-word-group text-center">
-                    <span class="shown-word-label">Word to Match: </span><span class="shown-word" id="show-word">word</span>
+                    <span class="shown-word-label">Word to Match: </span><span class="shown-word" id="shown-word">word</span>
                 </div>
                 <!-- Time clock display -->
-                <p class="time text-center">Time to beat: <span class="time-span">$time</span> !</p>
+                <p class="time text-center">Time to beat: <span class="time-span" id="time-span">$time</span> !</p>
                 <!-- Input field for user to match word, and for JS to check against word shown -->
                 <div class="form-group center-form game-input">
                     <input type="text" class="form-control" id="user-input" placeholder="Type word shown!" autofocus>
                 </div>
                 <p class="text-center tool-tip">Match the word shown in the given time....or GAME OVER!!</p>
                 <!-- Score visuals -->
-                <p class="score text-center">Total Score: <span class="score-span">$score</span> !</p>
+                <p class="score text-center">Total Score: <span class="score-span" id="score-span">$score</span> !</p>
             </div>
         </section>
     </div>

@@ -1,12 +1,16 @@
-//Load modal window on page load.
+//Load modal window on page load
 $(document).ready(function(){
     $("#openingSettings").modal('show');
 });
 
-//Load modal window on "Settings" click.
+//Global statements
+
+let themeSpan = document.querySelector("#theme-span");
+
+//Load modal window on "Settings" click
 function openModal(){
     $("#openingSettings").modal('show');
-};
+}
 
 //Change theme background
 function changeBackground(){
@@ -15,9 +19,10 @@ function changeBackground(){
     let themeValue = themeIndex.options[themeIndex.selectedIndex].value;
 
     if (themeValue === "pokemon"){
-        bodyBg.classList.add("pokemon-bg")
+        bodyBg.classList.add("pokemon-bg");
+        themeSpan.innerHTML = themeValue;
     } else {
         bodyBg.classList.remove("pokemon-bg")
     }
 }
-changeBackground()
+changeBackground();
