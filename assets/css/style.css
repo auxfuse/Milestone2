@@ -171,9 +171,15 @@ body {
     border-radius: 0.8rem;
 }
 
-.theme-text, .diff-text, .shown-word-label {
+    /* Common style theme for multiple visual text elements */
+.theme-text, .diff-text, .shown-word-label, .time, .score {
     font-size: 1.5rem;
     color: #00dde2;
+}
+
+    /* Common style theme for theme name, difficulty, time remaining & score counter */
+.theme-span, .diff-span, .time-span, .score-span {
+    color: #44ff78;
 }
 
     /* Padding bottom used to create additional spacing between word shown and input field for user */
