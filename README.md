@@ -22,12 +22,32 @@ I have obtained since the last Milestone submission, and is my own custom versio
 played as a child/young teen, (of which I can only vaguely remember now on our old family HP PC in the early 2000s and
 can't remember the name of).
 
+### Technologies Used.
+* HTML ~ main language used to structure the single-page application of the game and the user HUD.
+* CSS ~ styling language used to format and visually build upon the accompanying HTML.
+* Javasctipt ~ custom vanilla Javascript used to create the game functionality and accompanying game dynamic game elements.
+* <a href="https://getbootstrap.com/"> Bootstrap Framework</a> ~ Used as the core structuring layout building blocks of the website, ensuring mobile-frist design and responsive size display.
+* Some additional <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/#js">Imported Javascript & JQuery</a> ~ For the Modal and Responsive Navbar expand & collapse functionality.
+* <a href="https://www.jetbrains.com/pycharm/">PyCharm IDE</a> ~ PyCharm was used as the preferred IDE for this project.
+* PyCharm built-in Terminal ~ Used to commit to local repository and further push to Github Repo ensuring adequate version
+controlling throughout the life-cycle of the project build.
+* <a href="https://git-scm.com/">Git</a> ~ Installed on local device and integrated to PyCharm as a Plugin to enable version controlling.
+* <a href="https://github.com/auxfuse/Milestone1">Github</a> ~ Used to host the deployed website and repository of all previous versions of the build.
+* <a href="https://mycolor.space/">ColorSpace</a> ~ Used to find complimentary color schemes used throughout the game of my primary logo color.
+* <a href="http://eye-dropper.kepi.cz/">Eye Dropper (Color Picker)</a> ~ Open Source Google Chrome Extension used to obtain hexadecimal/rgba/hsl values of colours. Built by Kepi (<a href="https://github.com/kepi">Kepi's Github</a>)
+* <a href="https://www.pexels.com/">Pexels</a> ~ Online Free stock imagery. Used for providing 4 out of the 5 background images used to match the game's theme.
+* <a href="https://tinypng.com/">Tinypng.com</a> ~ Used to compress the background images without affecting image quality/integrity.
+* Google Chrome DevTools ~ Used to test the individual custom javascript functions, the responsiveness of the single-page
+application, and the CSS visuals, aswell as debugging for errors.
+* <a href="https://balsamiq.com/">Balsamiq</a> ~ Used for the creation of my pre-build wireframes showing the main elements and differences in
+size of same through small to large screen sizes.
+
 ### User Stories
 
 ### User Experience
 
 ### Features
 
-### Technologies Used
+
 
 
