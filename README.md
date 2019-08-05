@@ -42,6 +42,26 @@ application, and the CSS visuals, aswell as debugging for errors.
 * <a href="https://balsamiq.com/">Balsamiq</a> ~ Used for the creation of my pre-build wireframes showing the main elements and differences in
 size of same through small to large screen sizes.
 
+### Deployment.
+This single-page application Game was developed in PyCharm IDE and version controlling was utlisied via local (git) and online (github) repository
+technologies. 
+ 
+Deploying this single-page application Game was acheived through Github pages by:
+* Selecting the Repository from my list in the Github Dashboard.
+* Navigating to <i>"Settings"</i> and to the <i>"Github Pages"</i> section.
+* From the <i>"Source"</i> section, click on the dropdown and select the the "Master Branch" from the associated list.
+* Once <i>"Master Branch"</i> is selected, the page will auto-refresh and navigate the user to the top of the page with a
+visual ribbon display detailing <i>"Github pages source saved</i>, indicating the success of the deployement.
+* The link to the website can then be found under the <i>"Github Pages"</i> section, with a ribbon notification stating:<br> __"Your site is published at "https://auxfuse.github.io/Milestone2/index.html".__
+
+To clone the website:
+* Select the Repository from the Github Dashboard.
+* Click on the <i>"Clone or download"</i> green button located above and to the right of the File Structure table.
+* Click on the <i>"clipboard icon"</i> to the right of the Git URL to copy the web URL of the Clone. 
+* Open your preferred Integrated Development Environment (IDE) and navigate to the terminal window.
+* Change the directory to where you want to clone the repository too. (In the case of PyCharm the directory path can be found through the <i>"Navigate"</i> tab).
+* Paste the Git URL copied from above and click <i>"Ok"</i>. (Again in the case of PyCharm once you click <i>"clone"</i>, Git Root mapping will be automatically set to the project Root directory).
+
 ### User Stories
 
 ### User Experience
