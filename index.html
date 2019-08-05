@@ -52,7 +52,7 @@
                     <span class="shown-word-label">Word to Match: </span><span class="shown-word" id="shown-word">word</span>
                 </div>
                 <!-- Time clock display -->
-                <p class="time text-center">Time to beat: <span class="time-span" id="time-span">$time</span> !</p>
+                <p class="time text-center">Time to beat: <span class="time-span" id="time-span">$time</span> seconds!</p>
                 <!-- Input field for user to match word, and for JS to check against word shown -->
                 <div class="form-group center-form game-input">
                     <input type="text" class="form-control" id="user-input" placeholder="Type word shown!" autofocus>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="form-group dropdown-selection">
                             <!-- Dropdown list with values set to determine game difficulty -->
-                            <select class="custom-select mr-sm-2 w-50 category-dropdown" id="difficulty" required="">
+                            <select class="custom-select mr-sm-2 w-50 category-dropdown" id="difficulty" required="" onchange="setDiff()">
                                 <option value="">Select Difficulty!</option>
                                 <option value="easy">Easy</option>
                                 <option value="medium">Medium</option>

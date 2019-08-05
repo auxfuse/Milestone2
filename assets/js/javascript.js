@@ -6,13 +6,16 @@ $(document).ready(function(){
 //Global statements
 
 let themeSpan = document.querySelector("#theme-span");
+let diffSpan = document.querySelector("#diff-span");
+let timeSpan = document.querySelector("#time-span");
+let scoreSpan = document.querySelector("#score-span");
 
 //Load modal window on "Settings" click
 function openModal(){
     $("#openingSettings").modal('show');
 }
 
-//Change theme background & set themeSpan text to theme value
+//Change theme background & set themeSpan HUD element text to theme value
 function changeBackground(){
     let bodyBg = document.body;
     let themeIndex = document.getElementById("theme");
@@ -32,3 +35,19 @@ function changeBackground(){
     }
 }
 changeBackground();
+
+//Set difficulty and time to beat HUD elements
+function setDiff(){
+    let diffIndex = document.getElementById("difficulty");
+    let diffValue = diffIndex.options[diffIndex.selectedIndex].value;
+    diffSpan.innerHTML = diffValue;
+
+    if (diffValue === "easy"){
+        timeSpan.innerHTML = 8;
+    } else if (diffValue === "medium"){
+        timeSpan.innerHTML = 6;
+    } else if (diffValue === "hard"){
+        timeSpan.innerHTML = 4;
+    }
+}
+setDiff();
