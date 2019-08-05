@@ -9,7 +9,7 @@ This milestone projects creation is the culmination of learning and study from t
 Stack Developer Course, Javacript Fundamentals & Interactive Frontend Development, to build a custom mobile-first fully
 responsive Vanilla javascript game called "KeyWord!".
 
-<img src="../assets/img/keywordLogo.png" alt="logo" title="KeyWord! Logo" width="100" heigh="100">
+<img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord! Logo" width="100" heigh="100">
 
 ## User Experience
 
