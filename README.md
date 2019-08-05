@@ -1,7 +1,7 @@
 # Milestone Project 2
 ***
 
-## _KeyWord! the Game_
+## <img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord! Logo" width="32" height="32">_KeyWord! the Game_
 ***
 
 ### What does it do and what does it need to fulfill?
