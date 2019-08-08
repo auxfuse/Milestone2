@@ -49,7 +49,7 @@ var cars = [
 ];
 
 var nature = [
-    "Spruce"
+    "Spruce",
     "Rose",
     "Elm",
     "Tulip",
