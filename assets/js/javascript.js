@@ -3,6 +3,11 @@ $(document).ready(function(){
     $("#openingSettings").modal('show');
 });
 
+//Load modal window on "Settings" click
+function openModal(){
+    $("#openingSettings").modal('show');
+}
+
 //Global statements
 
 let themeSpan = document.querySelector("#theme-span");
@@ -63,11 +68,6 @@ var europeanCities = [
     "Madrid",
     "Rome"
 ];
-
-//Load modal window on "Settings" click
-function openModal(){
-    $("#openingSettings").modal('show');
-}
 
 //Change theme background & set themeSpan HUD element text to theme value
 function changeBackground(){
