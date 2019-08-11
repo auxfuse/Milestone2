@@ -41,6 +41,7 @@ controlling throughout the life-cycle of the project build.
 application, and the CSS visuals, aswell as debugging for errors.
 * <a href="https://balsamiq.com/">Balsamiq</a> ~ Used for the creation of my pre-build wireframes showing the main elements and differences in
 size of same through small to large screen sizes.
+* <a href="https://realfavicongenerator.net/">Favicon Generator</a> ~ Used to create favicon from custom Logo I created for the project.
 
 ### Deployment.
 This single-page application Game was developed in PyCharm IDE and version controlling was utlisied via local (git) and online (github) repository
