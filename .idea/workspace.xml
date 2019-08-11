@@ -25,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/javascript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="114" column="37" lean-forward="true" selection-start-line="114" selection-start-column="37" selection-end-line="114" selection-end-column="37" />
+            <state relative-caret-position="-216">
+              <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -46,7 +46,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1267" />
     <option name="width" value="660" />
     <option name="height" value="1047" />
@@ -137,12 +137,12 @@
       <workItem from="1565032647271" duration="11238000" />
       <workItem from="1565204768000" duration="10000" />
       <workItem from="1565298271922" duration="6278000" />
-      <workItem from="1565528879056" duration="3918000" />
+      <workItem from="1565528879056" duration="4786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71761000" />
+    <option name="totallyTimeSpent" value="72629000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -155,7 +155,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12633263" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -210,8 +209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/javascript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="114" column="37" lean-forward="true" selection-start-line="114" selection-start-column="37" selection-end-line="114" selection-end-column="37" />
+        <state relative-caret-position="-216">
+          <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
         </state>
       </provider>
     </entry>
