@@ -1,3 +1,5 @@
+window.addEventListener('load', initialise);
+
 //Load modal window on page load
 $(document).ready(function(){
     $("#openingSettings").modal('show');
@@ -8,12 +10,18 @@ function openModal(){
     $("#openingSettings").modal('show');
 }
 
+//initialise Gameboard
+function initialise(){
+    wordToMatch(pokemon);
+}
+
 //Global statements
 
 let themeSpan = document.querySelector("#theme-span");
 let diffSpan = document.querySelector("#diff-span");
 let timeSpan = document.querySelector("#time-span");
 let scoreSpan = document.querySelector("#score-span");
+let showWord = document.querySelector("#shown-word");
 
 // Arrays
 
@@ -116,3 +124,9 @@ function setArray(){
     }
 }
 setArray();
+
+//Show word to user
+function wordToMatch(pokemon){
+    let randomWord = Math.floor(Math.random() * pokemon.length);
+    showWord.innerHTML = pokemon[randomWord];
+}
