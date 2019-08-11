@@ -25,7 +25,7 @@ let showWord = document.querySelector("#shown-word");
 
 // Arrays
 
-let currentList = [];
+var currentList = [];
 
 var pokemon = [
     "Bulbasaur",
@@ -113,17 +113,6 @@ function setDiff(){
     }
 }
 setDiff();
-
-//Set currentList to themed array
-function setArray(){
-    let themeIndex = document.getElementById("theme");
-    let themeValue = themeIndex.options[themeIndex.selectedIndex].value;
-
-    if (themeValue === "pokemon"){
-        currentList = pokemon.slice();
-    }
-}
-setArray();
 
 //Show word to user
 function wordToMatch(pokemon){
