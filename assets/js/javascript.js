@@ -33,7 +33,7 @@ themeDropdown.onchange = () => changeBackground();
 
 // Arrays
 
-    //all JSON files received from Github user Sindreshohus
+    //all JSON files received from Github user Sindresorhus
 const wordList = [
     ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
     ['superheroes', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
