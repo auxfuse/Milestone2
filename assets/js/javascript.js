@@ -17,11 +17,19 @@ function initialise(){
 
 //Global statements
 
+let diffDropdown = document.querySelector("#difficulty");
+let themeDropdown = document.querySelector("#theme");
+
 let themeSpan = document.querySelector("#theme-span");
 let diffSpan = document.querySelector("#diff-span");
 let timeSpan = document.querySelector("#time-span");
 let scoreSpan = document.querySelector("#score-span");
 let showWord = document.querySelector("#shown-word");
+
+//Call html elements
+
+diffDropdown.onchange = () => setDiff();
+themeDropdown.onchange = () => changeBackground();
 
 // Arrays
 
