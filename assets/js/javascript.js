@@ -12,7 +12,7 @@ function openModal(){
 
 //initialise Gameboard
 function initialise(){
-    wordToMatch(pokemon);
+    wordToMatch();
 }
 
 //Global statements
@@ -33,56 +33,16 @@ themeDropdown.onchange = () => changeBackground();
 
 // Arrays
 
-var currentList = [];
-
-var pokemon = [
-    "Bulbasaur",
-    "Ivysaur",
-    "Venusaur",
-    "Charmander",
-    "Charmeleon",
-    "Charizard",
-    "Squirtle",
-    "Wartortle",
-    "Blastoise",
-    "Caterpie"
-];
-
-var superheroes = [
-	"3-D Man",
-	"A-Bomb",
-	"A.I.M.",
-	"Aaron Stack",
-	"Abbey",
-	"Abomination",
-	"Absorbing Man",
-	"Abyss",
-	"Acolytes",
-	"Adam Destine",
-];
-
-var cars = [
-    "Ford",
-    "Mazda",
-    "Peugeot",
-    "Mitsubishi",
-    "Honda"
-];
-
-var nature = [
-    "Spruce",
-    "Rose",
-    "Elm",
-    "Tulip",
-    "Buttercup"
-];
-
-var europeanCities = [
-    "Dublin",
-    "London",
-    "Paris",
-    "Madrid",
-    "Rome"
+    //all JSON files received from Github user Sindreshohus
+const wordList = [
+    ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
+    ['superheroes', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
+    ['supervillains', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json'],
+    ['superb', 'https://raw.githubusercontent.com/sindresorhus/superb/master/words.json'],
+    ['yesWords', 'https://raw.githubusercontent.com/sindresorhus/yes-no-words/master/yes.json'],
+    ['noWords', 'https://raw.githubusercontent.com/sindresorhus/yes-no-words/master/no.json'],
+    ['dogNames', 'https://raw.githubusercontent.com/sindresorhus/dog-names/master/male-dog-names.json'],
+    ['catNames', 'https://raw.githubusercontent.com/sindresorhus/cat-names/master/cat-names.json']
 ];
 
 //Change theme background & set themeSpan HUD element text to theme value
