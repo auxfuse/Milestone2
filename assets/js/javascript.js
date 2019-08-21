@@ -41,11 +41,13 @@ const wordList = [
     ['superheroes', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
     ['supervillains', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json'],
     ['superb', 'https://raw.githubusercontent.com/sindresorhus/superb/master/words.json'],
-    ['yesWords', 'https://raw.githubusercontent.com/sindresorhus/yes-no-words/master/yes.json'],
-    ['noWords', 'https://raw.githubusercontent.com/sindresorhus/yes-no-words/master/no.json'],
-    ['dogNames', 'https://raw.githubusercontent.com/sindresorhus/dog-names/master/male-dog-names.json'],
-    ['catNames', 'https://raw.githubusercontent.com/sindresorhus/cat-names/master/cat-names.json']
+    ['yes Words', 'https://raw.githubusercontent.com/sindresorhus/yes-no-words/master/yes.json'],
+    ['no Words', 'https://raw.githubusercontent.com/sindresorhus/yes-no-words/master/no.json'],
+    ['dog Names', 'https://raw.githubusercontent.com/sindresorhus/dog-names/master/male-dog-names.json'],
+    ['cat Names', 'https://raw.githubusercontent.com/sindresorhus/cat-names/master/cat-names.json']
 ];
+
+
 
 //Change theme background & set themeSpan HUD element text to theme value
 function changeBackground(){
