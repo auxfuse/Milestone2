@@ -20,6 +20,7 @@ function initialise(){
 let diffDropdown = document.querySelector("#difficulty");
 let themeDropdown = document.querySelector("#theme");
 
+let bodyBg = document.body;
 let themeSpan = document.querySelector("#theme-span");
 let diffSpan = document.querySelector("#diff-span");
 let timeSpan = document.querySelector("#time-span");
@@ -47,20 +48,17 @@ const wordList = [
 
 //Change theme background & set themeSpan HUD element text to theme value
 function changeBackground(){
-    let bodyBg = document.body;
-    let themeIndex = document.getElementById("theme");
-    let themeValue = themeIndex.options[themeIndex.selectedIndex].value;
-    themeSpan.innerHTML = themeValue;
+    themeSpan.innerHTML = themeDropdown;
 
-    if (themeValue === "pokemon"){
+    if (themeDropdown === "pokemon"){
         bodyBg.classList.add("pokemon-bg");
-    } else if (themeValue === "superheroes"){
+    } else if (themeDropdown === "superheroes"){
         bodyBg.classList.add("comicbook-bg");
-    } else if (themeValue === "cars"){
+    } else if (themeDropdown === "cars"){
         bodyBg.classList.add("cars-bg");
-    } else if (themeValue === "nature"){
+    } else if (themeDropdown === "nature"){
         bodyBg.classList.add("nature-bg");
-    } else if (themeValue === "european cities"){
+    } else if (themeDropdown === "european cities"){
         bodyBg.classList.add("city-bg");
     }
 }
@@ -68,15 +66,13 @@ changeBackground();
 
 //Set difficulty and time to beat HUD elements
 function setDiff(){
-    let diffIndex = document.getElementById("difficulty");
-    let diffValue = diffIndex.options[diffIndex.selectedIndex].value;
-    diffSpan.innerHTML = diffValue;
+    diffSpan.innerHTML = diffDropdown;
 
-    if (diffValue === "easy"){
+    if (diffDropdown === "easy"){
         timeSpan.innerHTML = 8;
-    } else if (diffValue === "medium"){
+    } else if (diffDropdown === "medium"){
         timeSpan.innerHTML = 6;
-    } else if (diffValue === "hard"){
+    } else if (diffDropdown === "hard"){
         timeSpan.innerHTML = 4;
     }
 }
