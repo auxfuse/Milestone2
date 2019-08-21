@@ -51,7 +51,7 @@ const wordList = [
 
 //Change theme background & set themeSpan HUD element text to theme value
 function changeBackground(){
-    themeSpan.innerHTML = themeDropdown;
+    themeSpan.innerHTML = themeDropdown.value;
 
     if (themeDropdown === "pokemon"){
         bodyBg.classList.add("pokemon-bg");
@@ -69,7 +69,7 @@ changeBackground();
 
 //Set difficulty and time to beat HUD elements
 function setDiff(){
-    diffSpan.innerHTML = diffDropdown;
+    diffSpan.innerHTML = diffDropdown.value;
 
     if (diffDropdown === "easy"){
         timeSpan.innerHTML = 8;
