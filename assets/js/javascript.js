@@ -17,9 +17,10 @@ function initialise(){
 
 //Global statements
 
+    //modal elements for targeting
 let diffDropdown = document.querySelector("#difficulty");
 let themeDropdown = document.querySelector("#theme");
-
+    //main page elements for js targeting
 let bodyBg = document.body;
 let themeSpan = document.querySelector("#theme-span");
 let diffSpan = document.querySelector("#diff-span");
@@ -79,7 +80,8 @@ function setDiff(){
 setDiff();
 
 //Show word to user
-function wordToMatch(pokemon){
-    let randomWord = Math.floor(Math.random() * pokemon.length);
-    showWord.innerHTML = pokemon[randomWord];
+function wordToMatch(){
+    let randomWord = Math.floor(Math.random() * wordList[selected].length);
+    showWord.innerHTML = wordList[selected][randomWord];
+    console.log(wordList[selected][randomWord])
 }
