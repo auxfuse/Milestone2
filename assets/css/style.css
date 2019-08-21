@@ -17,25 +17,43 @@ body {
     height: 100vh;
 }
 
-.comicbook-bg {
+.superhero-bg {
     background: url("../img/comicbook-bg.jpg") no-repeat center;
     background-size: cover;
     height: 100vh;
 }
 
-.cars-bg {
+.supervillain-bg {
     background: url("../img/cars-bg.jpg") no-repeat center;
     background-size: cover;
     height: 100vh;
 }
 
-.nature-bg {
+.superb-bg {
     background: url("../img/nature-bg.jpg") no-repeat center;
     background-size: cover;
     height: 100vh;
 }
 
-.city-bg {
+.yes-bg {
+    background: url("../img/city.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.no-bg {
+    background: url("../img/city.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.dog-bg {
+    background: url("../img/city.jpg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.cat-bg {
     background: url("../img/city.jpg") no-repeat center;
     background-size: cover;
     height: 100vh;
