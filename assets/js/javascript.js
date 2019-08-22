@@ -31,21 +31,38 @@ let showWord = document.querySelector("#shown-word");
 //Call html elements
 
 diffDropdown.onchange = () => setDiff();
-themeDropdown.onchange = () => changeBackground();
+themeDropdown.onchange = () => setTheme();
 
 // Arrays
 
     //all JSON files received from Github user Sindresorhus
-const wordList = [
+const wordArray = [
     ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
     ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
     ['supervillain', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json']
 ];
 
+const wordList = {
+    pokemon: [],
+    superhero: [],
+    supervillain: []
+};
 
+
+    //Load values from JSON file and populate into correct wordList object Key-value pair
+wordArray.forEach(item => {
+    fetch(item[1])
+    //res.Json() used to capture JSON response data and then assign it to the relevant wordList object key
+        .then(res => res.json())
+        .then(data => {
+            wordList[item[0]] = data;
+            console.log(wordList);
+        })
+        .catch(err => console.log(err))
+});
 
 //Change theme background & set themeSpan HUD element text to theme value
-function changeBackground(){
+function setTheme(){
     themeSpan.innerHTML = themeDropdown.value;
 
     if (themeDropdown === "pokemon"){
@@ -56,7 +73,7 @@ function changeBackground(){
         bodyBg.classList.add("supervillain-bg");
     }
 }
-changeBackground();
+setTheme();
 
 //Set difficulty and time to beat HUD elements
 function setDiff(){
