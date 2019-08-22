@@ -44,7 +44,7 @@ size of same through small to large screen sizes.
 * <a href="https://realfavicongenerator.net/">Favicon Generator</a> ~ Used to create favicon from custom Logo I created for the project.
 
 ### Future Features:
-* Add additional Theme background and lists for the user to choose from.
+* Add additional Themes, Theme backgrounds and lists for the user to choose from on Game start Menu.
 * Add 'High Score' Feature to store the best scores to local storage for the User to try and beat.
 * Create an 'Infinite & Un-Timed' Mode for the User to just Learn to type at their own pace.
 
