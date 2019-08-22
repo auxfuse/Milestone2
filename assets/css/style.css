@@ -29,36 +29,6 @@ body {
     height: 100vh;
 }
 
-.superb-bg {
-    background: url("../img/nature-bg.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-}
-
-.yes-bg {
-    background: url("../img/city.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-}
-
-.no-bg {
-    background: url("../img/city.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-}
-
-.dog-bg {
-    background: url("../img/city.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-}
-
-.cat-bg {
-    background: url("../img/city.jpg") no-repeat center;
-    background-size: cover;
-    height: 100vh;
-}
-
 /* Modal */
 
     /* Modal content is essentially the background plate, use of border-radius to create efficient UI */

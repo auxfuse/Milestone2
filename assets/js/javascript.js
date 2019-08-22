@@ -50,8 +50,10 @@ function changeBackground(){
 
     if (themeDropdown === "pokemon"){
         bodyBg.classList.add("pokemon-bg");
-    } else if (themeDropdown === "superheroes"){
-        bodyBg.classList.add("comicbook-bg");
+    } else if (themeDropdown === "superhero"){
+        bodyBg.classList.add("superhero-bg");
+    } else if (themeDropdown === "supervillain"){
+        bodyBg.classList.add("supervillain-bg");
     }
 }
 changeBackground();
