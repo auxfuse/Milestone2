@@ -18,6 +18,7 @@ function initialise(){
 //Global statements
 
     //modal elements for targeting
+let settingsIcon = document.querySelector("#settings");
 let diffDropdown = document.querySelector("#difficulty");
 let themeDropdown = document.querySelector("#theme");
     //main page elements for js targeting
@@ -30,6 +31,7 @@ let showWord = document.querySelector("#shown-word");
 
 //Call html elements
 
+settingsIcon.onclick = () => openModal();
 diffDropdown.onchange = () => setDiff();
 themeDropdown.onchange = () => setTheme();
 
@@ -64,6 +66,7 @@ wordArray.forEach(item => {
 //Change theme background & set themeSpan HUD element text to theme value
 function setTheme(){
     themeSpan.innerHTML = themeDropdown.value;
+    selected = themeDropdown.value;
 
     if (themeDropdown.value === "pokemon"){
         bodyBg.classList.add("pokemon-bg");
@@ -79,11 +82,11 @@ setTheme();
 function setDiff(){
     diffSpan.innerHTML = diffDropdown.value;
 
-    if (diffDropdown === "easy"){
+    if (diffDropdown.value === "easy"){
         timeSpan.innerHTML = 8;
-    } else if (diffDropdown === "medium"){
+    } else if (diffDropdown.value === "medium"){
         timeSpan.innerHTML = 6;
-    } else if (diffDropdown === "hard"){
+    } else if (diffDropdown.value === "hard"){
         timeSpan.innerHTML = 4;
     }
 }
@@ -91,7 +94,7 @@ setDiff();
 
 //Show word to user
 function wordToMatch(){
-    let randomWord = Math.floor(Math.random() * wordList[selected].length);
-    showWord.innerHTML = wordList[selected][randomWord];
-    console.log(wordList[selected][randomWord])
+    let randomWord = Math.floor(Math.random() * wordList[item].length);
+    showWord.innerHTML = wordList[item][randomWord];
+    console.log(wordList[item][randomWord]);
 }
