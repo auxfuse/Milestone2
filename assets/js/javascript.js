@@ -38,13 +38,8 @@ themeDropdown.onchange = () => changeBackground();
     //all JSON files received from Github user Sindresorhus
 const wordList = [
     ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
-    ['superheroes', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
-    ['supervillains', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json'],
-    ['superb', 'https://raw.githubusercontent.com/sindresorhus/superb/master/words.json'],
-    ['yes Words', 'https://raw.githubusercontent.com/sindresorhus/yes-no-words/master/yes.json'],
-    ['no Words', 'https://raw.githubusercontent.com/sindresorhus/yes-no-words/master/no.json'],
-    ['dog Names', 'https://raw.githubusercontent.com/sindresorhus/dog-names/master/male-dog-names.json'],
-    ['cat Names', 'https://raw.githubusercontent.com/sindresorhus/cat-names/master/cat-names.json']
+    ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
+    ['supervillain', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json']
 ];
 
 
@@ -57,12 +52,6 @@ function changeBackground(){
         bodyBg.classList.add("pokemon-bg");
     } else if (themeDropdown === "superheroes"){
         bodyBg.classList.add("comicbook-bg");
-    } else if (themeDropdown === "cars"){
-        bodyBg.classList.add("cars-bg");
-    } else if (themeDropdown === "nature"){
-        bodyBg.classList.add("nature-bg");
-    } else if (themeDropdown === "european cities"){
-        bodyBg.classList.add("city-bg");
     }
 }
 changeBackground();
