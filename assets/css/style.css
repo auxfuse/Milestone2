@@ -18,13 +18,13 @@ body {
 }
 
 .superhero-bg {
-    background: url("../img/comicbook-bg.jpg") no-repeat center;
+    background: url("../img/superhero-bg.jpg") no-repeat center;
     background-size: cover;
     height: 100vh;
 }
 
 .supervillain-bg {
-    background: url("../img/cars-bg.jpg") no-repeat center;
+    background: url("../img/supervillain-bg.jpg") no-repeat center;
     background-size: cover;
     height: 100vh;
 }

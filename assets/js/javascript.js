@@ -65,11 +65,11 @@ wordArray.forEach(item => {
 function setTheme(){
     themeSpan.innerHTML = themeDropdown.value;
 
-    if (themeDropdown === "pokemon"){
+    if (themeDropdown.value === "pokemon"){
         bodyBg.classList.add("pokemon-bg");
-    } else if (themeDropdown === "superhero"){
+    } else if (themeDropdown.value === "superhero"){
         bodyBg.classList.add("superhero-bg");
-    } else if (themeDropdown === "supervillain"){
+    } else if (themeDropdown.value === "supervillain"){
         bodyBg.classList.add("supervillain-bg");
     }
 }
