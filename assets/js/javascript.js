@@ -27,6 +27,10 @@ let game = {
         superhero: [],
         supervillain: []
     },
+    setTheme: (value) => {
+      themeSpan.innerHTML = value;
+      bodyBg.classList.add(`${value}-bg`);
+    },
     setDifficulty: (value) => {
         diffSpan.innerHTML = value;
 
@@ -62,7 +66,7 @@ function getData() {
 
     //Event Listeners to listen for changes of certain elements
 function eventListeners() {
-    // themeDropdown.onchange = ({target}) => game.setTheme(target.value);
+    themeDropdown.onchange = ({target}) => game.setTheme(target.value);
     diffDropdown.onchange = ({target}) => game.setDifficulty(target.value);
 }
 
