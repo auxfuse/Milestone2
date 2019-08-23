@@ -15,6 +15,31 @@ const timeSpan = document.querySelector("#time-span");
 const userInput = document.querySelector("#user-input");
 const scoreSpan = document.querySelector("#score-span");
 
+//Game board object
+let game = {
+    jsonArray: [
+        ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
+        ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
+        ['supervillain', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json']
+    ],
+    wordList: {
+        pokemon: [],
+        superhero: [],
+        supervillain: []
+    },
+    setDifficulty: (value) => {
+        diffSpan.innerHTML = value;
+
+        if (value === "easy"){
+            timeSpan.innerHTML = 8;
+        } else if (value === "medium"){
+            timeSpan.innerHTML = 6;
+        } else if (value === "hard"){
+            timeSpan.innerHTML = 4;
+        }
+    }
+};
+
 //Modal DOM change to hide or show gameboard
 const observer = new MutationObserver(() => {
     if (modalMenu.style.display == "block"){
@@ -24,3 +49,28 @@ const observer = new MutationObserver(() => {
     }
 });
 observer.observe(modalMenu, { attributes: true, childList: true});
+
+//Initialise Functions
+
+    //Load values from JSON file and populate into correct wordList key-value pair
+function getData() {
+    return Promise.all(game.jsonArray.map(async item => {
+        let request = await fetch(item[1]);
+        game.jsonArray[item[0]] = await request.json();
+    }));
+};
+
+    //Event Listeners to listen for changes of certain elements
+function eventListeners() {
+    // themeDropdown.onchange = ({target}) => game.setTheme(target.value);
+    diffDropdown.onchange = ({target}) => game.setDifficulty(target.value);
+}
+
+// init the game
+async function init() {
+    await getData();
+    eventListeners();
+    $("#openingSettings").modal('show');
+
+}
+init();
