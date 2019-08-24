@@ -4,6 +4,7 @@
 const modalMenu = document.querySelector("#openingSettings");
 const diffDropdown = document.querySelector("#difficulty");
 const themeDropdown = document.querySelector("#theme");
+const startButton = document.querySelector(".btn");
 
     //Main page Elements to target via Javascript
 const bodyBg = document.body;
@@ -42,6 +43,12 @@ let game = {
         } else if (value === "hard"){
             timeSpan.innerHTML = 4;
         }
+    },
+    setTimer: () => {
+        timeSpan.innerHTML === 8 ? timeSpan-- :
+            timeSpan.innerHTML === 6 ? timeSpan-- :
+                timeSpan.innerHTML === 4 ? timeSpan-- :
+                    "";
     }
 };
 
@@ -69,6 +76,7 @@ function getData() {
 function eventListeners() {
     themeDropdown.onchange = ({target}) => game.setTheme(target.value);
     diffDropdown.onchange = ({target}) => game.setDifficulty(target.value);
+    startButton.onclick = () => $("#openingSettings").modal("hide");
     openSettings.onclick = () => $("#openingSettings").modal("show");
 }
 
@@ -77,6 +85,6 @@ async function init() {
     await getData();
     eventListeners();
     $("#openingSettings").modal("show");
-
+    setInterval(game.setTimer(), 1000);
 }
 init();
