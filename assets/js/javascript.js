@@ -44,12 +44,6 @@ let game = {
             timeSpan.innerHTML = 4;
         }
     },
-    setTimer: () => {
-        timeSpan.innerHTML === 8 ? timeSpan-- :
-            timeSpan.innerHTML === 6 ? timeSpan-- :
-                timeSpan.innerHTML === 4 ? timeSpan-- :
-                    "";
-    }
 };
 
 //Modal DOM change to hide or show gameboard
@@ -70,7 +64,7 @@ function getData() {
         let request = await fetch(item[1]);
         game.jsonArray[item[0]] = await request.json();
     }));
-};
+}
 
     //Event Listeners to listen for changes of certain elements
 function eventListeners() {
@@ -85,6 +79,5 @@ async function init() {
     await getData();
     eventListeners();
     $("#openingSettings").modal("show");
-    setInterval(game.setTimer(), 1000);
 }
 init();
