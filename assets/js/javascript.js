@@ -7,6 +7,7 @@ const themeDropdown = document.querySelector("#theme");
 
     //Main page Elements to target via Javascript
 const bodyBg = document.body;
+const openSettings = document.querySelector("#settings")
 const gameboard = document.querySelector(".game-board");
 const themeSpan = document.querySelector("#theme-span");
 const diffSpan = document.querySelector("#diff-span");
@@ -68,13 +69,14 @@ function getData() {
 function eventListeners() {
     themeDropdown.onchange = ({target}) => game.setTheme(target.value);
     diffDropdown.onchange = ({target}) => game.setDifficulty(target.value);
+    openSettings.onclick = () => $("#openingSettings").modal("show");
 }
 
 // init the game
 async function init() {
     await getData();
     eventListeners();
-    $("#openingSettings").modal('show');
+    $("#openingSettings").modal("show");
 
 }
 init();
