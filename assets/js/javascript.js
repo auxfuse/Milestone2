@@ -19,6 +19,9 @@ const scoreSpan = document.querySelector("#score-span");
 
 //Game board object
 let game = {
+    selectedWord: null,
+    selectedTheme: null,
+    selectedDifficulty: null,
     jsonArray: [
         ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
         ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
@@ -29,12 +32,9 @@ let game = {
         superhero: [],
         supervillain: []
     },
-    setTheme: (value) => {
-      themeSpan.innerHTML = value;
-      bodyBg.classList.add(`${value}-bg`);
-    },
     setDifficulty: (value) => {
-        diffSpan.innerHTML = value;
+        game.selectedDifficulty = value;
+        diffSpan.innerHTML = game.selectedDifficulty;
 
         if (value === "easy"){
             timeSpan.innerHTML = 8;
@@ -44,6 +44,17 @@ let game = {
             timeSpan.innerHTML = 4;
         }
     },
+    setTheme: (value) => {
+      game.selectedTheme = value;
+      themeSpan.innerHTML = value;
+      bodyBg.classList.add(`${value}-bg`);
+      game.setWord();
+    },
+    setWord: () => {
+        const random = Math.floor(Math.random() * game.wordList[game.selectedTheme].length);
+        game.selectedWord = random.value;
+        shownWord.innerHTML = game.selectedWord;
+    }
 };
 
 //Modal DOM change to hide or show gameboard
@@ -79,5 +90,10 @@ async function init() {
     await getData();
     eventListeners();
     $("#openingSettings").modal("show");
+
+    game.setTheme("pokemon");
+    game.setDifficulty("hard");
+    game.setWord();
+    console.log(game.setWord());
 }
 init();
