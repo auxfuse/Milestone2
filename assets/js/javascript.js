@@ -52,7 +52,7 @@ let game = {
     },
     setWord: () => {
         const random = Math.floor(Math.random() * game.wordList[game.selectedTheme].length);
-        game.selectedWord = random.value;
+        game.selectedWord = game.wordList[game.selectedTheme][random];
         shownWord.innerHTML = game.selectedWord;
     }
 };
@@ -81,19 +81,20 @@ function getData() {
 function eventListeners() {
     themeDropdown.onchange = ({target}) => game.setTheme(target.value);
     diffDropdown.onchange = ({target}) => game.setDifficulty(target.value);
-    startButton.onclick = () => $("#openingSettings").modal("hide");
+    startButton.onclick = () => startGame();
     openSettings.onclick = () => $("#openingSettings").modal("show");
 }
 
-// init the game
+//Start game
+function startGame() {
+    game.call();
+    $("#openingSettings").modal("hide")
+}
+
+//Init the game
 async function init() {
     await getData();
     eventListeners();
     $("#openingSettings").modal("show");
-
-    game.setTheme("pokemon");
-    game.setDifficulty("hard");
-    game.setWord();
-    console.log(game.setWord());
 }
 init();
