@@ -73,7 +73,7 @@ observer.observe(modalMenu, { attributes: true, childList: true});
 function getData() {
     return Promise.all(game.jsonArray.map(async item => {
         let request = await fetch(item[1]);
-        game.jsonArray[item[0]] = await request.json();
+        game.wordList[item[0]] = await request.json();
     }));
 }
 
@@ -87,7 +87,6 @@ function eventListeners() {
 
 //Start game
 function startGame() {
-    game.call();
     $("#openingSettings").modal("hide")
 }
 
@@ -96,5 +95,10 @@ async function init() {
     await getData();
     eventListeners();
     $("#openingSettings").modal("show");
+
+    //TEST Data
+    game.setTheme("pokemon");
+    game.setDifficulty("easy");
+    game.setWord();
 }
 init();
