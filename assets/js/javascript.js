@@ -54,6 +54,15 @@ let game = {
         const random = Math.floor(Math.random() * game.wordList[game.selectedTheme].length);
         game.selectedWord = game.wordList[game.selectedTheme][random];
         shownWord.innerHTML = game.selectedWord;
+    },
+    matchWord: () => {
+        if (userInput.value === shownWord.innerHTML){
+            console.log("Yes");
+            game.setWord();
+            shownWord.innerHTML = game.selectedWord;
+        } else {
+            console.log("No");
+        }
     }
 };
 
@@ -77,17 +86,20 @@ function getData() {
     }));
 }
 
-    //Event Listeners to listen for changes of certain elements
+//Event Listeners to listen for changes of certain elements
 function eventListeners() {
+    //Modal elements event Listeners
     themeDropdown.onchange = ({target}) => game.setTheme(target.value);
     diffDropdown.onchange = ({target}) => game.setDifficulty(target.value);
     startButton.onclick = () => startGame();
+    //Gameboard elements event Listeners
     openSettings.onclick = () => $("#openingSettings").modal("show");
+    userInput.onchange = () => game.matchWord();
 }
 
 //Start game
 function startGame() {
-    $("#openingSettings").modal("hide")
+    $("#openingSettings").modal("hide");
 }
 
 //Init the game
@@ -95,10 +107,10 @@ async function init() {
     await getData();
     eventListeners();
     $("#openingSettings").modal("show");
+    game.matchWord();
 
     //TEST Data
-    game.setTheme("pokemon");
-    game.setDifficulty("easy");
-    game.setWord();
+    game.setTheme("superhero");
+    game.setDifficulty("medium");
 }
 init();
