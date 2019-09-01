@@ -30,8 +30,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+            <state relative-caret-position="239">
+              <caret line="78" column="22" lean-forward="true" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+              <folding>
+                <element signature="e#4460#4467#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/javascript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="94" column="40" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
+            <state relative-caret-position="630">
+              <caret line="187" selection-start-line="187" selection-end-line="187" />
             </state>
           </provider>
         </entry>
@@ -81,8 +84,8 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/js/javascript.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -99,7 +102,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,6 +136,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,12 +190,14 @@
       <workItem from="1566650153686" duration="5848000" />
       <workItem from="1566752329947" duration="6558000" />
       <workItem from="1566835993873" duration="782000" />
-      <workItem from="1566930275714" duration="8444000" />
+      <workItem from="1566930275714" duration="9109000" />
+      <workItem from="1567200054792" duration="598000" />
+      <workItem from="1567344958186" duration="2808000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130225000" />
+    <option name="totallyTimeSpent" value="134296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -207,7 +212,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1369936" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1401919" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -221,7 +226,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.15492958" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.15492958" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -276,15 +281,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+        <state relative-caret-position="239">
+          <caret line="78" column="22" lean-forward="true" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+          <folding>
+            <element signature="e#4460#4467#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/javascript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="94" column="40" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
+        <state relative-caret-position="630">
+          <caret line="187" selection-start-line="187" selection-end-line="187" />
         </state>
       </provider>
     </entry>

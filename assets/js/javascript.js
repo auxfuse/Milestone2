@@ -56,8 +56,9 @@ let game = {
         shownWord.innerHTML = game.selectedWord;
     },
     matchWord: () => {
-        if (userInput.value === shownWord.innerHTML){
+        if (userInput.value.toLowerCase() === shownWord.innerHTML.toLowerCase()){
             console.log("Yes");
+            userInput.value = "";
             game.setWord();
             shownWord.innerHTML = game.selectedWord;
         } else {
