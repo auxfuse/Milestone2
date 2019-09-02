@@ -48,7 +48,6 @@ let game = {
       game.selectedTheme = value;
       themeSpan.innerHTML = value;
       bodyBg.classList.add(`${value}-bg`);
-      game.setWord();
     },
     setWord: () => {
         const random = Math.floor(Math.random() * game.wordList[game.selectedTheme].length);
