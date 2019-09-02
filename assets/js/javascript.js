@@ -19,9 +19,11 @@ const scoreSpan = document.querySelector("#score-span");
 
 //Game board object
 let game = {
-    selectedWord: null,
     selectedTheme: null,
     selectedDifficulty: null,
+    selectedWord: null,
+    showTime: null,
+    showScore: null,
     jsonArray: [
         ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
         ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
@@ -57,12 +59,20 @@ let game = {
     matchWord: () => {
         if (userInput.value.toLowerCase() === shownWord.innerHTML.toLowerCase()){
             console.log("Yes");
-            userInput.value = "";
+            game.resetUserInput();
             game.setWord();
             shownWord.innerHTML = game.selectedWord;
+            game.score(+1);
         } else {
             console.log("No");
         }
+    },
+    resetUserInput: () => {
+        userInput.value = "";
+    },
+    score: (value) => {
+        game.showScore += value;
+        scoreSpan.innerHTML = value;
     }
 };
 
@@ -94,12 +104,13 @@ function eventListeners() {
     startButton.onclick = () => startGame();
     //Gameboard elements event Listeners
     openSettings.onclick = () => $("#openingSettings").modal("show");
-    userInput.onchange = () => game.matchWord();
+    userInput.onkeyup = () => game.matchWord();
 }
 
 //Start game
 function startGame() {
     $("#openingSettings").modal("hide");
+    game.setWord();
 }
 
 //Init the game
@@ -109,8 +120,5 @@ async function init() {
     $("#openingSettings").modal("show");
     game.matchWord();
 
-    //TEST Data
-    game.setTheme("superhero");
-    game.setDifficulty("medium");
 }
 init();
