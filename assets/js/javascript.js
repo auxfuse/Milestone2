@@ -58,19 +58,27 @@ let game = {
         }
     },
 
+    //Set Theme based on user selection in modal menu.
     setTheme: (value) => {
       game.selectedTheme = value;
       themeSpan.innerHTML = value;
+
+      //Change background by using template literal to insert theme value & -bg.
       bodyBg.classList.add(`${value}-bg`);
     },
 
+    //Create random word and display to user via flooring the result of random integer multiplied by the length of
+    //the selected array.
     setWord: () => {
         const random = Math.floor(Math.random() * game.wordList[game.selectedTheme].length);
         game.selectedWord = game.wordList[game.selectedTheme][random];
         shownWord.innerHTML = game.selectedWord;
     },
 
+    //matchWord function to check user inputs versus the current shown word.
     matchWord: () => {
+
+        //Using toLowerCase() built in javascript function to ensure case match on input versus shown word.
         if (userInput.value.toLowerCase() === shownWord.innerHTML.toLowerCase()){
             console.log("Yes");
             game.resetUserInput();
