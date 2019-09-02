@@ -19,25 +19,36 @@ const scoreSpan = document.querySelector("#score-span");
 
 //Game board object
 let game = {
+
+    //Set Game elements to null before selection or generation of elements occur.
     selectedTheme: null,
     selectedDifficulty: null,
     selectedWord: null,
     showTime: null,
     showScore: null,
+
+    //Named of JSON files and links to same to be fetched and indexed into wordList object function.
     jsonArray: [
         ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
         ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
         ['supervillain', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json']
     ],
+
+    //Game object key-value pair arrays to hold fetched JSON values.
     wordList: {
         pokemon: [],
         superhero: [],
         supervillain: []
     },
+
+    //Set Difficulty based on user selection in modal menu.
     setDifficulty: (value) => {
+
+        //Set game Heads up Display difficulty to value selected by User.
         game.selectedDifficulty = value;
         diffSpan.innerHTML = game.selectedDifficulty;
 
+        //Depending on difficulty selected by User, timeSpan timer set to appropriate countdown.
         if (value === "easy"){
             timeSpan.innerHTML = 8;
         } else if (value === "medium"){
@@ -46,16 +57,19 @@ let game = {
             timeSpan.innerHTML = 4;
         }
     },
+
     setTheme: (value) => {
       game.selectedTheme = value;
       themeSpan.innerHTML = value;
       bodyBg.classList.add(`${value}-bg`);
     },
+
     setWord: () => {
         const random = Math.floor(Math.random() * game.wordList[game.selectedTheme].length);
         game.selectedWord = game.wordList[game.selectedTheme][random];
         shownWord.innerHTML = game.selectedWord;
     },
+
     matchWord: () => {
         if (userInput.value.toLowerCase() === shownWord.innerHTML.toLowerCase()){
             console.log("Yes");
@@ -67,13 +81,16 @@ let game = {
             console.log("No");
         }
     },
+
     resetUserInput: () => {
         userInput.value = "";
     },
+
     score: (value) => {
         game.showScore += value;
         scoreSpan.innerHTML = value;
     }
+
 };
 
 //Modal DOM change to hide or show gameboard
@@ -118,7 +135,5 @@ async function init() {
     await getData();
     eventListeners();
     $("#openingSettings").modal("show");
-    game.matchWord();
-
 }
 init();
