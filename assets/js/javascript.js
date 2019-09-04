@@ -90,10 +90,12 @@ let game = {
         }
     },
 
+    //Reset user input to be used on word success.
     resetUserInput: () => {
         userInput.value = "";
     },
 
+    //Score function to track score for the user and display on the Heads up Display.
     score: (value) => {
         game.showScore += value;
         scoreSpan.innerHTML = value;
