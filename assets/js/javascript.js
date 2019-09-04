@@ -80,11 +80,13 @@ let game = {
 
         //Using toLowerCase() built in javascript function to ensure case match on input versus shown word.
         if (userInput.value.toLowerCase() === shownWord.innerHTML.toLowerCase()){
+            clearInterval(interval);
             console.log("Yes");
             game.resetUserInput();
             game.setWord();
             shownWord.innerHTML = game.selectedWord;
-            game.score(+1);
+            game.score++;
+            game.gameClock(true);
         } else {
             console.log("No");
         }
@@ -99,6 +101,27 @@ let game = {
     score: (value) => {
         game.showScore += value;
         scoreSpan.innerHTML = value;
+    },
+    
+    //Create timer to track and decrement timer based on Difficulty selected by user.
+    gameClock (start = null) {
+        
+        if (start) {
+            game.resetUserInput();
+            game.setWord();
+            game.showTime = game.selectedDifficulty;
+            interval = setInterval(game.gameClock, 1000);
+            return;
+        }
+        
+        if (game.showTime <= 0) {
+            clearInterval(interval);
+            gameClock(true);
+        } else if (!start) {
+            game.showTime = game.showTime - 1;
+        }
+
+        timeSpan.innerHTML = game.showTime;
     }
 
 };
@@ -137,7 +160,7 @@ function eventListeners() {
 //Start game
 function startGame() {
     $("#openingSettings").modal("hide");
-    game.setWord();
+    game.gameClock(true);
 }
 
 //Init the game
