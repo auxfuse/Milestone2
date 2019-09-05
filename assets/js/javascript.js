@@ -46,15 +46,15 @@ let game = {
 
         //Set game Heads up Display difficulty to value selected by User.
         game.selectedDifficulty = value;
-        diffSpan.innerHTML = game.selectedDifficulty;
+        diffSpan.innerHTML = value;
 
         //Depending on difficulty selected by User, timeSpan timer set to appropriate countdown.
         if (value === "easy"){
-            timeSpan.innerHTML = 8;
+            game.showTime = 8;
         } else if (value === "medium"){
-            timeSpan.innerHTML = 6;
+            game.showTime = 6;
         } else if (value === "hard"){
-            timeSpan.innerHTML = 4;
+            game.showTime = 4;
         }
     },
 
@@ -80,15 +80,17 @@ let game = {
 
         //Using toLowerCase() built in javascript function to ensure case match on input versus shown word.
         if (userInput.value.toLowerCase() === shownWord.innerHTML.toLowerCase()){
+
             clearInterval(interval);
-            console.log("Yes");
+
             game.resetUserInput();
-            game.setWord();
-            shownWord.innerHTML = game.selectedWord;
-            game.score++;
+
             game.gameClock(true);
+
         } else {
+
             console.log("No");
+
         }
     },
 
@@ -102,24 +104,25 @@ let game = {
         game.showScore += value;
         scoreSpan.innerHTML = value;
     },
-    
+
     //Create timer to track and decrement timer based on Difficulty selected by user.
     gameClock (start = null) {
-        
+
         if (start) {
             game.resetUserInput();
             game.setWord();
-            game.showTime = game.selectedDifficulty;
             interval = setInterval(game.gameClock, 1000);
+            game.showTime (+ 1);
             return;
-        }
-        
+        };
+
         if (game.showTime <= 0) {
             clearInterval(interval);
-            gameClock(true);
+            game.gameClock(true);
+
         } else if (!start) {
             game.showTime = game.showTime - 1;
-        }
+        };
 
         timeSpan.innerHTML = game.showTime;
     }
