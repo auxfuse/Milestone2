@@ -24,10 +24,10 @@ let game = {
     selectedTheme: null,
     selectedDifficulty: null,
     selectedWord: null,
-    showTime: null,
-    showScore: null,
+    showTime: 0,
+    showScore: 0,
 
-    //Named of JSON files and links to same to be fetched and indexed into wordList object function.
+    //Names of JSON files and links to same to be fetched and indexed into wordList object function.
     jsonArray: [
         ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
         ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
@@ -45,7 +45,7 @@ let game = {
     setDifficulty: (value) => {
 
         //Set game Heads up Display difficulty to value selected by User.
-        game.selectedDifficulty = value;
+        game.selectedDifficulty = game.showTime;
         diffSpan.innerHTML = value;
 
         //Depending on difficulty selected by User, timeSpan timer set to appropriate countdown.
@@ -63,7 +63,7 @@ let game = {
       game.selectedTheme = value;
       themeSpan.innerHTML = value;
 
-      //Change background by using template literal to insert theme value & -bg.
+      //Change background by using template literal to insert theme value name as string & concat "-bg" to construct class name.
       bodyBg.classList.add(`${value}-bg`);
     },
 
@@ -85,6 +85,9 @@ let game = {
 
             game.resetUserInput();
 
+            game.showScore++;
+            scoreSpan.innerHTML = game.showScore;
+
             game.gameClock(true);
 
         } else {
@@ -99,20 +102,17 @@ let game = {
         userInput.value = "";
     },
 
-    //Score function to track score for the user and display on the Heads up Display.
-    score: (value) => {
-        game.showScore += value;
-        scoreSpan.innerHTML = value;
-    },
-
     //Create timer to track and decrement timer based on Difficulty selected by user.
     gameClock (start = null) {
 
         if (start) {
             game.resetUserInput();
             game.setWord();
+
+            game.showTime = game.showTime + 1;
+
             interval = setInterval(game.gameClock, 1000);
-            game.showTime (+ 1);
+
             return;
         };
 
@@ -163,6 +163,7 @@ function eventListeners() {
 //Start game
 function startGame() {
     $("#openingSettings").modal("hide");
+    scoreSpan.innerHTML = 0;
     game.gameClock(true);
 }
 
