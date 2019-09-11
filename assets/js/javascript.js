@@ -1,12 +1,16 @@
-//Global Statements
+/*
+===========================
+Global Variables
+===========================
+*/
 
-    //Modal Elements to target via Javascript
+    // Modal Elements to target via Javascript
 const modalMenu = document.querySelector("#openingSettings");
 const diffDropdown = document.querySelector("#difficulty");
 const themeDropdown = document.querySelector("#theme");
 const startButton = document.querySelector(".btn");
 
-    //Main page Elements to target via Javascript
+    // Main page Elements to target via Javascript
 const bodyBg = document.body;
 const openSettings = document.querySelector("#settings")
 const gameboard = document.querySelector(".game-board");
@@ -44,24 +48,22 @@ let game = {
     //Set Difficulty based on user selection in modal menu.
     setDifficulty: (value) => {
 
-        //Set game Heads up Display difficulty to value selected by User.
-        game.selectedDifficulty = game.showTime;
-        diffSpan.innerHTML = value;
-
         //Depending on difficulty selected by User, timeSpan timer set to appropriate countdown.
         if (value === "easy"){
-            game.showTime = 8;
+            game.selectedDifficulty = 8;
         } else if (value === "medium"){
-            game.showTime = 6;
+            game.selectedDifficulty = 6;
         } else if (value === "hard"){
-            game.showTime = 4;
+            game.selectedDifficulty  = 4;
         }
+
+        diffSpan.innerText = value;
     },
 
     //Set Theme based on user selection in modal menu.
     setTheme: (value) => {
       game.selectedTheme = value;
-      themeSpan.innerHTML = value;
+      themeSpan.innerText = value;
 
       //Change background by using template literal to insert theme value name as string & concat "-bg" to construct class name.
       bodyBg.classList.add(`${value}-bg`);
@@ -72,21 +74,22 @@ let game = {
     setWord: () => {
         const random = Math.floor(Math.random() * game.wordList[game.selectedTheme].length);
         game.selectedWord = game.wordList[game.selectedTheme][random];
-        shownWord.innerHTML = game.selectedWord;
+        shownWord.innerText = game.selectedWord;
     },
 
     //matchWord function to check user inputs versus the current shown word.
-    matchWord: () => {
+    matchWord: (value) => {
 
         //Using toLowerCase() built in javascript function to ensure case match on input versus shown word.
-        if (userInput.value.toLowerCase() === shownWord.innerHTML.toLowerCase()){
+        if (userInput.value.toLowerCase() === shownWord.innerText.toLowerCase()){
+
+            game.showScore++;
+
+            scoreSpan.innerText = game.showScore;
 
             clearInterval(interval);
 
             game.resetUserInput();
-
-            game.showScore++;
-            scoreSpan.innerHTML = game.showScore;
 
             game.gameClock(true);
 
@@ -102,29 +105,33 @@ let game = {
         userInput.value = "";
     },
 
-    //Create timer to track and decrement timer based on Difficulty selected by user.
-    gameClock (start = null) {
+    // Create timer to track and decrement timer based on Difficulty selected by user.
+    gameClock (start) {
 
-        if (start) {
+        if (start === true) {
+
             game.resetUserInput();
+
             game.setWord();
 
-            game.showTime = game.showTime + 1;
-
             interval = setInterval(game.gameClock, 1000);
+
+            game.showTime (+ 1);
 
             return;
         };
 
         if (game.showTime <= 0) {
+
             clearInterval(interval);
+
             game.gameClock(true);
 
         } else if (!start) {
             game.showTime = game.showTime - 1;
         };
 
-        timeSpan.innerHTML = game.showTime;
+        timeSpan.innerText = game.showTime;
     }
 
 };
@@ -157,13 +164,13 @@ function eventListeners() {
     startButton.onclick = () => startGame();
     //Gameboard elements event Listeners
     openSettings.onclick = () => $("#openingSettings").modal("show");
-    userInput.onkeyup = () => game.matchWord();
+    userInput.onkeyup = ({target}) => game.matchWord(target.value);
 }
 
 //Start game
 function startGame() {
     $("#openingSettings").modal("hide");
-    scoreSpan.innerHTML = 0;
+    scoreSpan.innerText = 0;
     game.gameClock(true);
 }
 
