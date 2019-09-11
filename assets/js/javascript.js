@@ -84,11 +84,15 @@ let game = {
         bodyBg.classList.add(`${value}-bg`);
     },
 
-    // Create random word and display to user via flooring the result of random integer multiplied by the length of
-    // the selected array.
+    // Create random word and display via flooring the result to the shownWord element's innerText for the User.
     setWord: () => {
+
+        // Create variable to hold the floored result array index of randomising the multiplication of the selected theme in wordLists length.
         const random = Math.floor(Math.random() * game.wordLists[game.selectedTheme].length);
+        // Set the selectedWord to the accessed item by equalling to the sub array index value of selectedTheme[random].
         game.selectedWord = game.wordLists[game.selectedTheme][random];
+
+        // Set innerText of the shownWord element to the returned random result of the above.
         shownWord.innerText = game.selectedWord;
     },
 
