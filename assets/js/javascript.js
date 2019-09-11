@@ -99,7 +99,9 @@ let game = {
     // Create timer to track and decrement timer based on Difficulty selected by user.
     gameClock (start = null) {
 
+        // If gameClock argument is anything other than default null.
         if (start) {
+            // Invoke the setWord method inside the "game" object to call random word for user.
             game.setWord();
             interval = setInterval(game.gameClock, 1000);
             game.time = game.selectedDifficulty;
@@ -107,9 +109,11 @@ let game = {
             clearInterval(interval);
             game.gameClock(true);
             game.resetUserInput();
+            return;
         }
 
         timeSpan.innerText = game.time;
+        game.time = game.time - 1;
     },
 
     // matchWord function to check user inputs versus the current shown word.
@@ -165,7 +169,7 @@ function eventListeners() {
     // To hide or show gameboard using observer and changing display property of modal and gameboard.
 const observer = new MutationObserver(() => {
 
-    // If modal menu is visible (display = block), then hide gameboard element.
+    // If modal menu is visible as in "display = block", then hide gameboard element.
     // Doing this ensure the gameboard is not showing behind the modal menu.
     if (modalMenu.style.display == "block"){
         gameboard.style.display = "none"
@@ -182,7 +186,7 @@ observer.observe(modalMenu, { attributes: true, childList: true});
 =================================
 */
 
-    // Load values from JSON file and populate into correct wordList key-value pair
+    // Fetch JSON files and populate wordLists object via like with like, e.g. "pokemon" json values populating "pokemon" property of wordLists object nested within "game" object.
 function getData() {
     return Promise.all(game.originalData.map(async item => {
         let request = await fetch(item[1]);
@@ -190,14 +194,14 @@ function getData() {
     }));
 }
 
-    // Start game
+    // Start game function to initiate game, assigned to start button Event Listener through onclick.
 function startGame() {
     $("#openingSettings").modal("hide");
     scoreSpan.innerText = 0;
     game.gameClock(true);
 }
 
-    // Init the game
+    // Initialise the game data, event listeners & modal.
 async function init() {
     await getData();
     eventListeners();
