@@ -1,16 +1,16 @@
 /*
-===========================
-Global Variables
-===========================
+=================================
+    Global Variables
+=================================
 */
 
-    // Modal Elements to target via Javascript
+    // Modal Elements to target via Javascript.
 const modalMenu = document.querySelector("#openingSettings");
 const diffDropdown = document.querySelector("#difficulty");
 const themeDropdown = document.querySelector("#theme");
 const startButton = document.querySelector(".btn");
 
-    // Main page Elements to target via Javascript
+    // Main page Elements to target via Javascript.
 const bodyBg = document.body;
 const openSettings = document.querySelector("#settings")
 const gameboard = document.querySelector(".game-board");
@@ -21,34 +21,42 @@ const timeSpan = document.querySelector("#time-span");
 const userInput = document.querySelector("#user-input");
 const scoreSpan = document.querySelector("#score-span");
 
-//Game board object
+/*
+=================================
+    Game Board Object
+=================================
+*/
+
+    // Literal Notation used to create "game" object. Key-value pairs separated via comma ",".
+    // Properties are declared at the top, with methods declared after.
+    // This keeps the object clean and well structured as per Javascript Literal Notation Object Creation general practices.
 let game = {
 
-    //Set Game elements to null before selection or generation of elements occur.
+    // Default setting of Game elements before selection or generation of elements update same.
     selectedTheme: null,
     selectedDifficulty: null,
     selectedWord: null,
-    showTime: 0,
-    showScore: 0,
+    time: 0,
+    score: 0,
 
-    //Names of JSON files and links to same to be fetched and indexed into wordList object function.
-    jsonArray: [
+    // Names of JSON files and links to same to be fetched and indexed into wordList object function.
+    originalData: [
         ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
         ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
         ['supervillain', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json']
     ],
 
-    //Game object key-value pair arrays to hold fetched JSON values.
-    wordList: {
+    // wordLists object key-value pair as arrays to hold fetched JSON values.
+    wordLists: {
         pokemon: [],
         superhero: [],
         supervillain: []
     },
 
-    //Set Difficulty based on user selection in modal menu.
+    // Set Difficulty based on user selection in modal menu.
     setDifficulty: (value) => {
 
-        //Depending on difficulty selected by User, timeSpan timer set to appropriate countdown.
+        // Depending on difficulty selected by User update selectedDifficulty property to reflect using an integer, e.g. "8" for easy.
         if (value === "easy"){
             game.selectedDifficulty = 8;
         } else if (value === "medium"){
@@ -57,35 +65,42 @@ let game = {
             game.selectedDifficulty  = 4;
         }
 
+        // Set innerText of diffSpan element to the value of the difficulty dropdown selector, "easy", "medium" or "hard".
         diffSpan.innerText = value;
     },
 
-    //Set Theme based on user selection in modal menu.
+    // Set Theme based on user selection in modal menu.
     setTheme: (value) => {
-      game.selectedTheme = value;
-      themeSpan.innerText = value;
 
-      //Change background by using template literal to insert theme value name as string & concat "-bg" to construct class name.
-      bodyBg.classList.add(`${value}-bg`);
+        // Depending on theme selected by User update selectedTheme property with the value of the theme dropdown selector.
+        game.selectedTheme = value;
+        // Set innerText of themeSpan element to the value of the theme dropdown selector, e.g. "pokemon".
+        themeSpan.innerText = value;
+
+        // Loop through each item in the originalData and remove class name from the body to ensure background and wordLists selection update accordingly.
+        // Without this step, the user could not reselect a previous theme to change the background as the class would not be removed from the body.
+        game.originalData.forEach(item => document.body.classList.remove(`${item[0]}-bg`));
+        // Change background by using template literal to insert theme value name as string & concat "-bg" to construct class name.
+        bodyBg.classList.add(`${value}-bg`);
     },
 
-    //Create random word and display to user via flooring the result of random integer multiplied by the length of
-    //the selected array.
+    // Create random word and display to user via flooring the result of random integer multiplied by the length of
+    // the selected array.
     setWord: () => {
-        const random = Math.floor(Math.random() * game.wordList[game.selectedTheme].length);
-        game.selectedWord = game.wordList[game.selectedTheme][random];
+        const random = Math.floor(Math.random() * game.wordLists[game.selectedTheme].length);
+        game.selectedWord = game.wordLists[game.selectedTheme][random];
         shownWord.innerText = game.selectedWord;
     },
 
-    //matchWord function to check user inputs versus the current shown word.
+    // matchWord function to check user inputs versus the current shown word.
     matchWord: (value) => {
 
-        //Using toLowerCase() built in javascript function to ensure case match on input versus shown word.
+        // Using toLowerCase() built in javascript function to ensure case match on input versus shown word.
         if (userInput.value.toLowerCase() === shownWord.innerText.toLowerCase()){
 
-            game.showScore++;
+            game.score++;
 
-            scoreSpan.innerText = game.showScore;
+            scoreSpan.innerText = game.score;
 
             clearInterval(interval);
 
@@ -100,7 +115,7 @@ let game = {
         }
     },
 
-    //Reset user input to be used on word success.
+    // Reset user input to be used on word success.
     resetUserInput: () => {
         userInput.value = "";
     },
@@ -116,65 +131,86 @@ let game = {
 
             interval = setInterval(game.gameClock, 1000);
 
-            game.showTime (+ 1);
+            game.time (+ 1);
 
             return;
         };
 
-        if (game.showTime <= 0) {
+        if (game.time <= 0) {
 
             clearInterval(interval);
 
             game.gameClock(true);
 
         } else if (!start) {
-            game.showTime = game.showTime - 1;
+            game.time = game.time - 1;
         };
 
-        timeSpan.innerText = game.showTime;
+        timeSpan.innerText = game.time;
     }
 
 };
 
-//Modal DOM change to hide or show gameboard
+/*
+=================================
+    Event Listeners
+=================================
+*/
+
+function eventListeners() {
+
+    //Modal elements event Listeners
+    themeDropdown.onchange = ({target}) => game.setTheme(target.value);
+    diffDropdown.onchange = ({target}) => game.setDifficulty(target.value);
+    startButton.onclick = () => startGame();
+
+    //Gameboard elements event Listeners
+    openSettings.onclick = () => $("#openingSettings").modal("show");
+    userInput.onkeyup = ({target}) => game.matchWord(target.value);
+}
+
+/*
+=================================
+    Modal DOM Manipulation
+=================================
+*/
+
+    // To hide or show gameboard using observer and changing display property of modal and gameboard.
 const observer = new MutationObserver(() => {
+
+    // If modal menu is visible (display = block), then hide gameboard element.
+    // Doing this ensure the gameboard is not showing behind the modal menu.
     if (modalMenu.style.display == "block"){
         gameboard.style.display = "none"
+    // Else, show gameboard element.
     } else {
         gameboard.style.display = "block"
     }
 });
 observer.observe(modalMenu, { attributes: true, childList: true});
 
-//Initialise Functions
+/*
+=================================
+    Initialise Game
+=================================
+*/
 
-    //Load values from JSON file and populate into correct wordList key-value pair
+    // Load values from JSON file and populate into correct wordList key-value pair
 function getData() {
-    return Promise.all(game.jsonArray.map(async item => {
+    return Promise.all(game.originalData.map(async item => {
         let request = await fetch(item[1]);
-        game.wordList[item[0]] = await request.json();
+        game.wordLists[item[0]] = await request.json();
     }));
 }
 
-//Event Listeners to listen for changes of certain elements
-function eventListeners() {
-    //Modal elements event Listeners
-    themeDropdown.onchange = ({target}) => game.setTheme(target.value);
-    diffDropdown.onchange = ({target}) => game.setDifficulty(target.value);
-    startButton.onclick = () => startGame();
-    //Gameboard elements event Listeners
-    openSettings.onclick = () => $("#openingSettings").modal("show");
-    userInput.onkeyup = ({target}) => game.matchWord(target.value);
-}
-
-//Start game
+    // Start game
 function startGame() {
     $("#openingSettings").modal("hide");
     scoreSpan.innerText = 0;
     game.gameClock(true);
 }
 
-//Init the game
+    // Init the game
 async function init() {
     await getData();
     eventListeners();
