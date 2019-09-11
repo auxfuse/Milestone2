@@ -96,26 +96,33 @@ let game = {
         shownWord.innerText = game.selectedWord;
     },
 
+    // Create timer to track and decrement timer based on Difficulty selected by user.
+    gameClock (start = null) {
+
+        if (start) {
+            game.setWord();
+            interval = setInterval(game.gameClock, 1000);
+            game.time = game.selectedDifficulty;
+        } else if (game.time <= 0) {
+            clearInterval(interval);
+            game.gameClock(true);
+            game.resetUserInput();
+        }
+
+        timeSpan.innerText = game.time;
+    },
+
     // matchWord function to check user inputs versus the current shown word.
     matchWord: (value) => {
 
         // Using toLowerCase() built in javascript function to ensure case match on input versus shown word.
-        if (userInput.value.toLowerCase() === shownWord.innerText.toLowerCase()){
+        if (value.toLowerCase() === shownWord.innerText.toLowerCase()){
 
-            game.score++;
-
+            game.setScore(1);
             scoreSpan.innerText = game.score;
-
             clearInterval(interval);
-
             game.resetUserInput();
-
             game.gameClock(true);
-
-        } else {
-
-            console.log("No");
-
         }
     },
 
@@ -124,33 +131,9 @@ let game = {
         userInput.value = "";
     },
 
-    // Create timer to track and decrement timer based on Difficulty selected by user.
-    gameClock (start) {
-
-        if (start === true) {
-
-            game.resetUserInput();
-
-            game.setWord();
-
-            interval = setInterval(game.gameClock, 1000);
-
-            game.time (+ 1);
-
-            return;
-        };
-
-        if (game.time <= 0) {
-
-            clearInterval(interval);
-
-            game.gameClock(true);
-
-        } else if (!start) {
-            game.time = game.time - 1;
-        };
-
-        timeSpan.innerText = game.time;
+    setScore: () => {
+        game.score += 1;
+        scoreSpan.innerText = game.score;
     }
 
 };
