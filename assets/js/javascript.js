@@ -101,18 +101,27 @@ let game = {
 
         // If gameClock argument is anything other than default null.
         if (start) {
+
             // Invoke the setWord method inside the "game" object to call random word for user.
             game.setWord();
+
+            // Interval created to update the gameClock every 1second.
             interval = setInterval(game.gameClock, 1000);
+            // Set game time to that of the selectedDifficulty property integer.
             game.time = game.selectedDifficulty;
+
         } else if (game.time <= 0) {
+            // Call Game Over Modal with redirect to main modal menu. Reset clock automatically for now......
+            // Replace with Game Over Modal and reformat comment.
             clearInterval(interval);
             game.gameClock(true);
             game.resetUserInput();
             return;
         }
 
+        // Set innerText of timeSpan element to be the integer of the game.time property.
         timeSpan.innerText = game.time;
+        // Decrement timer by 1 every second as the interval runs.
         game.time = game.time - 1;
     },
 
@@ -122,21 +131,32 @@ let game = {
         // Using toLowerCase() built in javascript function to ensure case match on input versus shown word.
         if (value.toLowerCase() === shownWord.innerText.toLowerCase()){
 
+            // On successful word match, pass the setScore function an argument of 1 which will tally in that method.
             game.setScore(1);
-            scoreSpan.innerText = game.score;
+
+            // Ensure interval is cleared in order for the gameClock to reset in the next line of the method.
             clearInterval(interval);
-            game.resetUserInput();
+            // Restart gameClock by assigning the parameter as true to reset the time for the user to the desired difficulty value.
             game.gameClock(true);
+
+            // Clear user input for next word.
+            game.resetUserInput();
         }
     },
 
     // Reset user input to be used on word success.
     resetUserInput: () => {
+
+        // Set the value of the userInput global variable to blank.
         userInput.value = "";
     },
 
+    // setScore method to track the total score of the current game session.
     setScore: () => {
+
+        // Set the "score" property to +1.
         game.score += 1;
+        // Set the innerText of the scoreSpan element to the current value of the "score" property.
         scoreSpan.innerText = game.score;
     }
 
