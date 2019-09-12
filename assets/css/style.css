@@ -165,7 +165,7 @@ body {
     color: #00dde2;
 }
 
-    /* Common style theme for theme name, difficulty, time remaining & score counter */
+    /* Highlighter */
 .theme-span, .diff-span, .time-span, .score-span {
     color: #44ff78;
 }
@@ -192,4 +192,17 @@ body {
     color: #7f909a;
     font-style: italic;
     letter-spacing: 0.15rem;
+}
+
+/* Game over modal */
+
+    /* Common style smaller Text size on Game over modal */
+.thank-you, .bug-reports {
+    font-size: 1.3rem;
+    color: #00dde2;
+}
+
+    /* Highlighter style to draw emphasis to important points */
+.gameover-score, .replay {
+    color: #44ff78;
 }

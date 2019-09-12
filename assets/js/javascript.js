@@ -12,7 +12,7 @@ const startButton = document.querySelector(".btn");
 
 // Main page Elements to target via Javascript.
 const bodyBg = document.body;
-const openSettings = document.querySelector("#settings")
+const openSettings = document.querySelector("#settings");
 const gameboard = document.querySelector(".game-board");
 const themeSpan = document.querySelector("#theme-span");
 const diffSpan = document.querySelector("#diff-span");
@@ -20,6 +20,7 @@ const shownWord = document.querySelector("#shown-word");
 const timeSpan = document.querySelector("#time-span");
 const userInput = document.querySelector("#user-input");
 const scoreSpan = document.querySelector("#score-span");
+const gameoverScore = document.querySelector("#gameover-score");
 
 /*
 =================================
@@ -113,10 +114,8 @@ let game = {
         } else if (game.time <= 0) {
             // Call Game Over Modal with redirect to main modal menu. Reset clock automatically for now......
             // Replace with Game Over Modal and reformat comment.
-            clearInterval(interval);
-            game.gameClock(true);
-            game.resetUserInput();
-            return;
+            game.gameOver();
+            gameoverScore.innerText = game.score;
         }
 
         // Set innerText of "timeSpan" element to be the integer of the "game.time" property.
@@ -158,6 +157,11 @@ let game = {
         game.score += 1;
         // Set the innerText of the "scoreSpan" element to the current value of the "score" property.
         scoreSpan.innerText = game.score;
+    },
+
+    gameOver: () => {
+        $("#gameOver").modal("show");
+        gameboard.style.display = "none";
     }
 
 };
