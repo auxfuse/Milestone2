@@ -4,13 +4,13 @@
 =================================
 */
 
-    // Modal Elements to target via Javascript.
+// Modal Elements to target via Javascript.
 const modalMenu = document.querySelector("#openingSettings");
 const diffDropdown = document.querySelector("#difficulty");
 const themeDropdown = document.querySelector("#theme");
 const startButton = document.querySelector(".btn");
 
-    // Main page Elements to target via Javascript.
+// Main page Elements to target via Javascript.
 const bodyBg = document.body;
 const openSettings = document.querySelector("#settings")
 const gameboard = document.querySelector(".game-board");
@@ -27,9 +27,9 @@ const scoreSpan = document.querySelector("#score-span");
 =================================
 */
 
-    // Literal Notation used to create "game" object. Key-value pairs separated via comma ",".
-    // Properties are declared at the top, with methods declared after.
-    // This keeps the object clean and well structured as per Javascript Literal Notation Object Creation general practices.
+// Literal Notation used to create "game" object. Key-value pairs separated via comma ",".
+// Properties are declared at the top, with methods declared after.
+// This keeps the object clean and well structured as per Javascript Literal Notation Object Creation general practices.
 let game = {
 
     // Default setting of Game elements before selection or generation of elements update same.
@@ -186,7 +186,7 @@ function eventListeners() {
 =================================
 */
 
-    // To hide or show gameboard using observer and changing display property of modal and gameboard.
+// To hide or show gameboard using observer and changing display property of modal and gameboard.
 const observer = new MutationObserver(() => {
 
     // If modal menu is visible as in "display = block", then hide gameboard element.
@@ -206,22 +206,26 @@ observer.observe(modalMenu, { attributes: true, childList: true});
 =================================
 */
 
-    // Fetch JSON files and populate wordLists object via like with like, e.g. "pokemon" json values populating "pokemon" property of wordLists object nested within "game" object.
+// Fetch JSON files and populate wordLists object via like with like, e.g. "pokemon" json values populating "pokemon" property of wordLists object nested within "game" object.
 function getData() {
+
+    // Return a promise that we can map each element in an array to.
     return Promise.all(game.originalData.map(async item => {
+        // Fetch each item value and await for result to return and store in "request" local variable.
         let request = await fetch(item[1]);
+        // Populate wordLists callback of "item" and assign it the parsed data using the Fetch API method "json()".
         game.wordLists[item[0]] = await request.json();
     }));
 }
 
-    // Start game function to initiate game, assigned to start button Event Listener through onclick.
+// Start game function to initiate game, assigned to start button Event Listener through onclick.
 function startGame() {
     $("#openingSettings").modal("hide");
     scoreSpan.innerText = 0;
     game.gameClock(true);
 }
 
-    // Initialise the game data, event listeners & modal.
+// Initialise the game data, event listeners & modal.
 async function init() {
     await getData();
     eventListeners();
