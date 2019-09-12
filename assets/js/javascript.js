@@ -105,9 +105,9 @@ let game = {
             // Invoke the setWord method inside the "game" object to call random word for user.
             game.setWord();
 
-            // Interval created to update the gameClock every 1second.
+            // Interval created to update the "gameClock" every 1second.
             interval = setInterval(game.gameClock, 1000);
-            // Set game time to that of the selectedDifficulty property integer.
+            // Set game "time" to that of the selectedDifficulty property integer.
             game.time = game.selectedDifficulty;
 
         } else if (game.time <= 0) {
@@ -119,22 +119,22 @@ let game = {
             return;
         }
 
-        // Set innerText of timeSpan element to be the integer of the game.time property.
+        // Set innerText of "timeSpan" element to be the integer of the "game.time" property.
         timeSpan.innerText = game.time;
         // Decrement timer by 1 every second as the interval runs.
         game.time = game.time - 1;
     },
 
-    // matchWord function to check user inputs versus the current shown word.
+    // "matchWord" function to check user inputs versus the current shown word.
     matchWord: (value) => {
 
-        // Using toLowerCase() built in javascript function to ensure case match on input versus shown word.
+        // Using "toLowerCase()" built in javascript function to ensure case match on input versus shown word.
         if (value.toLowerCase() === shownWord.innerText.toLowerCase()){
 
-            // On successful word match, pass the setScore function an argument of 1 which will tally in that method.
+            // On successful word match, pass the "setScore" function a parameter of 1 which will add to the current total game score.
             game.setScore(1);
 
-            // Ensure interval is cleared in order for the gameClock to reset in the next line of the method.
+            // Ensure interval is cleared in order for the "gameClock" to reset in the next line of the method.
             clearInterval(interval);
             // Restart gameClock by assigning the parameter as true to reset the time for the user to the desired difficulty value.
             game.gameClock(true);
@@ -147,7 +147,7 @@ let game = {
     // Reset user input to be used on word success.
     resetUserInput: () => {
 
-        // Set the value of the userInput global variable to blank.
+        // Set the value of the "userInput" global variable to blank.
         userInput.value = "";
     },
 
@@ -156,7 +156,7 @@ let game = {
 
         // Set the "score" property to +1.
         game.score += 1;
-        // Set the innerText of the scoreSpan element to the current value of the "score" property.
+        // Set the innerText of the "scoreSpan" element to the current value of the "score" property.
         scoreSpan.innerText = game.score;
     }
 
@@ -186,14 +186,14 @@ function eventListeners() {
 =================================
 */
 
-// To hide or show gameboard using observer and changing display property of modal and gameboard.
+// To hide or show "gameboard" element using observer and changing display property of modal and gameboard.
 const observer = new MutationObserver(() => {
 
-    // If modal menu is visible as in "display = block", then hide gameboard element.
-    // Doing this ensure the gameboard is not showing behind the modal menu.
+    // If modal menu is visible as in "display = block", then hide "gameboard" element.
+    // Doing this ensure the "gameboard" element is not showing behind the modal menu.
     if (modalMenu.style.display == "block"){
         gameboard.style.display = "none"
-    // Else, show gameboard element.
+    // Else, show "gameboard" element.
     } else {
         gameboard.style.display = "block"
     }
@@ -220,15 +220,25 @@ function getData() {
 
 // Start game function to initiate game, assigned to start button Event Listener through onclick.
 function startGame() {
+
+    // Close modal "Main menu".
     $("#openingSettings").modal("hide");
+
+    // Ensure innerText of "scoreSpan" element is set to "0" (zero) for new game.
     scoreSpan.innerText = 0;
+    // Initiate "gameClock" method of the "game" object.
     game.gameClock(true);
 }
 
 // Initialise the game data, event listeners & modal.
 async function init() {
+
+    // getData() and wait for it to return the desired result via combination of Theme selection and fetching JSON values into "wordLists" object property nested within "game" object.
     await getData();
+    // Initialise event Listeners to trigger events when window detects same.
     eventListeners();
+
+    // Show modal on window initialisation.
     $("#openingSettings").modal("show");
 }
 init();
