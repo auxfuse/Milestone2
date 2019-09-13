@@ -209,7 +209,7 @@ const observer = new MutationObserver(() => {
         gameboard.style.display = "block"
     }
 });
-observer.observe(modalMenu, { attributes: true, childList: true});
+observer.observe(modalMenu, {attributes: true, childList: true});
 
 /*
 =================================
@@ -232,13 +232,23 @@ function getData() {
 // Start game function to initiate game, assigned to start button Event Listener through onclick.
 function startGame() {
 
+    // Check dropdowns for selection before allowing user to start game.
+    if (!diffDropdown.value || !themeDropdown.value){
+        alert("Please select a difficulty and theme to start the Game!");
+    } else {
+
     // Close modal "Main menu".
     $("#openingSettings").modal("hide");
 
+    // Set focus to userInput element.
+    userInput.autofocus = true;
+
     // Ensure innerText of "scoreSpan" element is set to "0" (zero) for new game.
     scoreSpan.innerText = 0;
+
     // Initiate "gameClock" method of the "game" object.
     game.gameClock(true);
+    }
 }
 
 // Replay game function to refresh browser window.
