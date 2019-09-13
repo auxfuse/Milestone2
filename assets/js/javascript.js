@@ -177,15 +177,19 @@ let game = {
 
 function eventListeners() {
 
-    //Modal elements event Listeners
+    // Modal elements event Listeners
     themeDropdown.onchange = ({target}) => game.setTheme(target.value);
     diffDropdown.onchange = ({target}) => game.setDifficulty(target.value);
     startButton.onclick = () => startGame();
 
-    //Gameboard elements event Listeners
+    // Gameboard elements event Listeners
     openSettings.onclick = () => $("#openingSettings").modal("show");
     userInput.onkeyup = ({target}) => game.matchWord(target.value);
+
+    // Gameover elements event Listeners
+    replay.onclick = () => replayGame();
 }
+
 
 /*
 =================================
@@ -235,6 +239,13 @@ function startGame() {
     scoreSpan.innerText = 0;
     // Initiate "gameClock" method of the "game" object.
     game.gameClock(true);
+}
+
+// Replay game function to refresh browser window.
+function replayGame() {
+
+    // Use of "window.location" to get the current URL and reloading to same via "reload(true)" to reload from browser instead of the cache.
+    window.location.reload(true);
 }
 
 // Initialise the game data, event listeners & modal.
