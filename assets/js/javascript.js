@@ -162,15 +162,6 @@ let game = {
         scoreSpan.innerText = game.score;
     },
 
-    // Allow user to open the Main Menu mid game to change difficulty or theme and restart.
-    openMenu: () => {
-
-        // Call modal to show.
-        $("#openingSettings").modal("show")
-        // Clear interval to ensure interval doesn't stack on top of older instances of same.
-        clearInterval(interval);
-    },
-
     gameOver: () => {
         $("#gameOver").modal("show");
         gameboard.style.display = "none";
@@ -192,7 +183,7 @@ function eventListeners() {
     startButton.onclick = () => startGame();
 
     // Gameboard elements event Listeners
-    openSettings.onclick = () => game.openMenu();
+    openSettings.onclick = () => replayGame();
     userInput.onkeyup = ({target}) => game.matchWord(target.value);
 
     // Gameover elements event Listeners
