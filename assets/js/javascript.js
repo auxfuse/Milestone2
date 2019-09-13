@@ -20,7 +20,10 @@ const shownWord = document.querySelector("#shown-word");
 const timeSpan = document.querySelector("#time-span");
 const userInput = document.querySelector("#user-input");
 const scoreSpan = document.querySelector("#score-span");
+
+// Game Over Modal Elements to target via Javascript.
 const gameoverScore = document.querySelector("#gameover-score");
+const replay = document.querySelector(".replay-btn");
 
 /*
 =================================

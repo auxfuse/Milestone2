@@ -126,9 +126,16 @@
                     <h4 class="modal-title"><i class="fas fa-key"></i>Game Over!<i class="fas fa-keyboard"></i></h4>
                 </div>
                 <div class="modal-body">
+                    <!-- Game over details such as Total game sessions score and instructions on how to restart game -->
                     <p class="score text-center">You scored <span class="gameover-score" id="gameover-score">$gameover-score</span> !</p>
-                    <p class="thank-you text-center">Thank you for playing KeyWord! To play again hit the <span class="replay">"Replay"</span> button below.</p>
-                    <!-- Add button here to restart and replay -->
+                    <p class="thank-you text-center">Thank you for playing KeyWord!</p>
+                    <!-- Replay instruction and button to refresh game window -->
+                    <p class="thank-you text-center">To play again hit the <span class="replay">"Replay"</span> button.</p>
+                    <div class="form-row replay-btn">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-success replay-button">Replay!</button>
+                        </div>
+                    </div>
                     <p class="bug-reports text-center">Did you encounter any bugs whilst playing? If so please let us know.</p>
                     <!-- Add small form element to capture bugs from users -->
                 </div>

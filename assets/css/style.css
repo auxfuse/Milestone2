@@ -206,3 +206,8 @@ body {
 .gameover-score, .replay {
     color: #44ff78;
 }
+
+.replay-btn {
+    justify-content: center;
+    margin-bottom: 20px;
+}
