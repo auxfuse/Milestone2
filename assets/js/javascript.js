@@ -24,6 +24,7 @@ const scoreSpan = document.querySelector("#score-span");
 // Game Over Modal Elements to target via Javascript.
 const gameoverScore = document.querySelector("#gameover-score");
 const replay = document.querySelector(".replay-btn");
+const pointSpan = document.querySelector(".points");
 
 /*
 =================================
@@ -160,6 +161,13 @@ let game = {
         game.score += 1;
         // Set the innerText of the "scoreSpan" element to the current value of the "score" property.
         scoreSpan.innerText = game.score;
+
+        // Set innerText of the "pointSpan" element depending on current score value, e.g if score=1 set to "point" to be grammatically correct.
+        if (game.score === 1){
+            pointSpan.innerText = "point";
+        } else if (game.score >= 2 ) {
+            pointSpan.innerText = "points";
+        }
     },
 
     gameOver: () => {
