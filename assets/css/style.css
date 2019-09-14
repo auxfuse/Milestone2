@@ -211,3 +211,29 @@ body {
     justify-content: center;
     margin-bottom: 20px;
 }
+
+    /* Social links styles */
+.bug-reports {
+    margin-bottom: 0;
+}
+
+.social-links {
+    text-align: center;
+    height: 40px;
+}
+
+.social-links li a i {
+    font-size: 1.6rem;
+    margin: 10px;
+    color: #00dde2;
+    transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -webkit-transition: all 0.50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+}
+
+.social-links li a i:hover {
+    color: #44ff78;
+    transform: rotate(360deg);
+}
+
