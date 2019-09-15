@@ -109,15 +109,41 @@ In general the design of the game is pretty straight forward, a Single-Page appl
 utilises a single index.html file in conjunction with the Bootstrap Framework to ensure Mobile first fully responsive design. When considering design elements
 for this project, a retro-ish vibe for the typography and color scheme came to mind. 
 
-<dl>
-    <dt>Font:</dt>
-    <dd>The project has a main font of <a href="https://fonts.google.com/specimen/Bangers">'Bangers'</a> which was imported via the head element of the html file from Google Fonts, 
-with the backup font being set to a default of 'Sans-serif'. The straight forward captalised style of 'Bangers' made it easily recognisable for each character of the alphabet
-to ensure a user could read each and every letter/number/special character shown.</dd>
+1. Font:
 
-    <dt>Color Scheme</dt>
-    <dd></dd>
-</dl>
+    The project has a main font of <a href="https://fonts.google.com/specimen/Bangers">'Bangers'</a> which was imported via the head element of the html file from Google Fonts, 
+with the backup font being set to a default of 'Sans-serif'. The straight forward captalised style of 'Bangers' made it easily recognisable for each character of the alphabet
+to ensure a user could read each and every letter/number/special character shown.
+
+2. Color Scheme:
+    
+    Two primary conflicting colors were conceived when creating this project:
+    * ![#44ff78](https://placehold.it/15/44ff78/000000?text=+) `#44ff78` - Primary color
+    * ![#00dde2](https://placehold.it/15/00dde2/000000?text=+) `#00dde2` - Secondary color
+    * ![#000000](https://placehold.it/15/000000/000000?text+=) `#000000` - Tertiary color
+    
+    The primary color was used as the dominant color in the logo and to draw the attention to interactive elements in the Main menu and to the focus elements
+    such as the "shown word" or the "remaining time" to the user on the gameboard. The secondary color was used as a continuous palette choice of the basic accompanying
+    text to the Primary color justification. The Main menu modal, the Gameboard and the Game over modal all utilise the tertiary color as a solid contrast to the neon
+    overarching illumination of the primary and secondary colors.
+    
+3. Logo:
+
+    The logo was custom created by myself as a play on the game name of "KeyWord!". The plain vector of the key image with the cut-out "word" offset in black made for a slightly mechanically
+    whimsical and fun feature to distinguish the game from a host of similar games in the real world marketplace. The logo was made in Microsoft Excel by importing a basic key vector and then overlaying
+    shapes onto the vector in the Primary color. From their I used a textbox from Microsoft Excel with some basic font to create the "Word" in the Tertiary color and overlay onto the traced vector
+    image. Finally the shapes and text were grouped together to flatten into one layer and then exported as a .png file to use within the project.
+    
+    This .png file was passed through TinyPNG.com resulting in the smallest possible size whilst maintaining the current high-res image and the original aspect ratio. The newly compressed .png file of
+    the logo was saved into an "img" folder within the "assets" folder of the Project Directory where it can be accessed and utilised as part of the project.
+    <h1 align="center">
+        <a href="https://github.com/auxfuse/Milestone2/blob/master/assets/img/keywordLogo.png" target="_blank"><img src="https://github.com/auxfuse/Milestone2/blob/master/assets/img/keywordLogo.png" alt="KeyWord! Logo"/></a>
+    </h1>
+    
+4. 
+    
+        
+
 
 
 
