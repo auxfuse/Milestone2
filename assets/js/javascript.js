@@ -49,8 +49,8 @@ let game = {
         ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
         ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
         ['supervillain', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json'],
-        ['beaches', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/json/beaches.json'],
-        ['crossfit', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/json/crossfit.json']
+        ['beaches', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/beaches.json'],
+        ['crossfit', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/crossfit.json']
     ],
 
     // wordLists object key-value pair as arrays to hold fetched JSON values.
