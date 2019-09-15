@@ -48,14 +48,18 @@ let game = {
     originalData: [
         ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
         ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
-        ['supervillain', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json']
+        ['supervillain', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json'],
+        // ['beaches', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/json/beaches.json'],
+        ['crossfit', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/json/crossfit.json']
     ],
 
     // wordLists object key-value pair as arrays to hold fetched JSON values.
     wordLists: {
         pokemon: [],
         superhero: [],
-        supervillain: []
+        supervillain: [],
+        // beaches: [],
+        crossfit: []
     },
 
     // Set Difficulty based on user selection in modal menu.
