@@ -49,7 +49,7 @@ size of same through small to large screen sizes.
 * Create an 'Infinite & Un-Timed' Mode for the User to just Learn to type at their own pace.
 
 ### Deployment.
-This single-page application Game was developed in PyCharm IDE and version controlling was utlisied via local (git) and online (github) repository
+This single-page application Game was developed in PyCharm IDE and version controlling was utilised via local (git) and online (github) repository
 technologies. 
  
 Deploying this single-page application Game was acheived through Github pages by:
@@ -69,6 +69,33 @@ To clone the website:
 * Paste the Git URL copied from above and click <i>"Ok"</i>. (Again in the case of PyCharm once you click <i>"clone"</i>, Git Root mapping will be automatically set to the project Root directory).
 
 ### User Stories
+
+-Generic User (gamer):
+* As a user, I want a game to help my typing skills get faster.
+* As a user, I want something fun to challenge my typing skills.
+* As a user, I want a mobile friendly game to play whilst on the go via my mobile phone/tablet.
+* As a user, I want a game that will help my children learn to type.
+* As a user, I want a fun game for my kids to help with their spelling.
+
+For a generic user, the game assists in fulfilling these goals by:
+* Creating clean, aesthetically pleasing visuals.
+* Allowing the user to dynamically set the words via Theme and the difficulty to set the timer on the "Main menu".
+* Setting the core design process of the application to be Fully Responsive via Bootstrap Mobile First approach.
+* Enticing themes such as popular current media trends in Pokemon & Superheroes for Children and then engaging the more mature audience with Beaches & Crossft.
+* Allowing a parent to have a game on their devices that is child-friendly and will assist in cognitive learning abilities such as increasing hand-eye coordination and enhancing grammar and linguistics skills.
+
+---
+
+-Developer:
+* As a developer, I want to create a pure Javascript game to test my skills to date.
+* As a developer, I want to create fully responsive app to showcase my skills to a potential employer.
+* As a developer, I want an on-going project I can enhance and improve over time as my skills grow.
+
+For myself as the developer, the game build assisted in fulfilling these goals by:
+* Enabling me to develop the logic and learn the structure of object-oriented programming.
+* Allowing me to go outside of the current brief of the milestone to create an application from Vanilla Javascript.
+* Assisting me in using additional resources such as Mozilla MDN docs and Udemy courses to learn the more about Vanilla Javascript.
+* Preparing myself the world of Object-Orientated Languages.
 
 ### User Experience
 
