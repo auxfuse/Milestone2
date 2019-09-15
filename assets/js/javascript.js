@@ -49,7 +49,7 @@ let game = {
         ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
         ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
         ['supervillain', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json'],
-        // ['beaches', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/json/beaches.json'],
+        ['beaches', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/json/beaches.json'],
         ['crossfit', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/json/crossfit.json']
     ],
 
@@ -58,7 +58,7 @@ let game = {
         pokemon: [],
         superhero: [],
         supervillain: [],
-        // beaches: [],
+        beaches: [],
         crossfit: []
     },
 
