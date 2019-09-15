@@ -68,6 +68,11 @@ To clone the website:
 * Change the directory to where you want to clone the repository too. (In the case of PyCharm the directory path can be found through the <i>"Navigate"</i> tab).
 * Paste the Git URL copied from above and click <i>"Ok"</i>. (Again in the case of PyCharm once you click <i>"clone"</i>, Git Root mapping will be automatically set to the project Root directory).
 
+---
+---
+
+## User Experience
+
 ### User Stories
 
 -Generic User (gamer):
@@ -84,12 +89,11 @@ For a generic user, the game assists in fulfilling these goals by:
 * Enticing themes such as popular current media trends in Pokemon & Superheroes for Children and then engaging the more mature audience with Beaches & Crossft.
 * Allowing a parent to have a game on their devices that is child-friendly and will assist in cognitive learning abilities such as increasing hand-eye coordination and enhancing grammar and linguistics skills.
 
----
-
 -Developer:
 * As a developer, I want to create a pure Javascript game to test my skills to date.
 * As a developer, I want to create fully responsive app to showcase my skills to a potential employer.
 * As a developer, I want an on-going project I can enhance and improve over time as my skills grow.
+* As a developer, I wanted to create a game as Gaming has been my primary hobby since being a child.
 
 For myself as the developer, the game build assisted in fulfilling these goals by:
 * Enabling me to develop the logic and learn the structure of object-oriented programming.
@@ -97,10 +101,38 @@ For myself as the developer, the game build assisted in fulfilling these goals b
 * Assisting me in using additional resources such as Mozilla MDN docs and Udemy courses to learn the more about Vanilla Javascript.
 * Preparing myself the world of Object-Orientated Languages.
 
-### User Experience
+---
+
+### Design
+
+In general the design of the game is pretty straight forward, a Single-Page application with elements that seamlessly interact via events. The project
+utilises a single index.html file in conjunction with the Bootstrap Framework to ensure Mobile first fully responsive design. When considering design elements
+for this project, a retro-ish vibe for the typography and color scheme came to mind. 
+
+<dl>
+    <dt>Font:</dt>
+    <dd>The project has a main font of <a href="https://fonts.google.com/specimen/Bangers">'Bangers'</a> which was imported via the head element of the html file from Google Fonts, 
+with the backup font being set to a default of 'Sans-serif'. The straight forward captalised style of 'Bangers' made it easily recognisable for each character of the alphabet
+to ensure a user could read each and every letter/number/special character shown.</dd>
+
+    <dt>Color Scheme</dt>
+    <dd></dd>
+</dl>
+
+
+
+
+
+
+### Wireframes
+
+
+
 
 ### Features
 
+On page load, a modal pops up acting as the main-menu for the user, asking them to pick a difficulty and a theme and explaining the rules surrounding the concept
+of their selection and the impact they have on the game. 
 
 
 
