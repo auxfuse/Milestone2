@@ -85,12 +85,6 @@ let game = {
         game.selectedTheme = value;
         // Set innerText of themeSpan element to the value of the theme dropdown selector, e.g. "pokemon".
         themeSpan.innerText = value;
-
-        // Loop through each item in the originalData and remove class name from the body to ensure background and wordLists selection update accordingly.
-        // Without this step, the user could not reselect a previous theme to change the background as the class would not be removed from the body.
-        game.originalData.forEach(item => document.body.classList.remove(`${item[0]}-bg`));
-        // Change background by using template literal to insert theme value name as string & concat "-bg" to construct class name.
-        bodyBg.classList.add(`${value}-bg`);
     },
 
     // Create random word and display via flooring the result to the shownWord element's innerText for the User.
