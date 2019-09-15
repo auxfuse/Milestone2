@@ -137,7 +137,7 @@ to ensure a user could read each and every letter/number/special character shown
     This .png file was passed through TinyPNG.com resulting in the smallest possible size whilst maintaining the current high-res image and the original aspect ratio. The newly compressed .png file of
     the logo was saved into an "img" folder within the "assets" folder of the Project Directory where it can be accessed and utilised as part of the project.
     <h1 align="center">
-        <a href="https://github.com/auxfuse/Milestone2/blob/master/assets/img/keywordLogo.png" target="_blank"><img src="https://github.com/auxfuse/Milestone2/blob/master/assets/img/keywordLogo.png" alt="KeyWord! Logo"/></a>
+        <img src="https://github.com/auxfuse/Milestone2/blob/master/assets/img/keywordLogo.png" alt="KeyWord! Logo" width="96" height="96"/>
     </h1>
     
 4. 
