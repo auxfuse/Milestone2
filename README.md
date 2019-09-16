@@ -22,7 +22,7 @@ I have obtained since the last Milestone submission, and is my own custom versio
 played as a child/young teen, (of which I can only vaguely remember now on our old family HP PC in the early 2000s and
 can't remember the name of).
 
-### Technologies Used.
+### Technologies & Tools Used.
 * HTML ~ main language used to structure the single-page application of the game and the user HUD.
 * CSS ~ styling language used to format and visually build upon the accompanying HTML.
 * Javasctipt ~ custom vanilla Javascript used to create the game functionality and accompanying game dynamic game elements.
@@ -42,11 +42,6 @@ application, and the CSS visuals, aswell as debugging for errors.
 * <a href="https://balsamiq.com/">Balsamiq</a> ~ Used for the creation of my pre-build wireframes showing the main elements and differences in
 size of same through small to large screen sizes.
 * <a href="https://realfavicongenerator.net/">Favicon Generator</a> ~ Used to create favicon from custom Logo I created for the project.
-
-### Future Features:
-* Add additional Themes, Theme backgrounds and lists for the user to choose from on Game start Menu.
-* Add 'High Score' Feature to store the best scores to local storage for the User to try and beat.
-* Create an 'Infinite & Un-Timed' Mode for the User to just Learn to type at their own pace.
 
 ### Deployment.
 This single-page application Game was developed in PyCharm IDE and version controlling was utilised via local (git) and online (github) repository
@@ -134,7 +129,7 @@ to ensure a user could read each and every letter/number/special character shown
     
 3. Logo:
 
-    The logo was custom created by myself as a play on the game name of "KeyWord!". The plain vector of the key image with the cut-out "word" offset in black made for a slightly mechanically
+    The logo was custom created by myself as a play on the game name of "KeyWord!". The plain vector of the key image with the cut-out "word" offset with transparency made for a slightly mechanically
     whimsical and fun feature to distinguish the game from a host of similar games in the real world marketplace. The logo was made in Microsoft Excel by importing a basic key vector and then overlaying
     shapes onto the vector in the Primary color. From their I used a textbox from Microsoft Excel with some basic font to create the "Word" in the Tertiary color and overlay onto the traced vector
     image. Finally the shapes and text were grouped together to flatten into one layer and then exported as a .png file to use within the project.
@@ -182,8 +177,77 @@ to ensure a user could read each and every letter/number/special character shown
         
 ### Features
 
-On page load, a modal pops up acting as the main-menu for the user, asking them to pick a difficulty and a theme and explaining the rules surrounding the concept
-of their selection and the impact they have on the game. 
+This project incorporates the Bootstrap Framework and DoM manipulation to present and feature the main elements of the application being the "Main-Menu Modal", the "Gameboard" and the "Game-Over Modal". The project's logical flow of elements is as follows:
 
+1. The applications header has two small functions that act rather similarly to each other. Although similar to each other, I decided to keep them both in at their current functionality as they both use different methods to apply the same effects on the application.
+   * The logo is placed in the top-left position of the SPA as is customary with current branding conventions. The logo itself is wrapped in an anchor tag referenced to this page itself, thus acting as a <i>refresh</i>.
+   * The <i>"Settings"</i> navigation link is to act as a computed refresh to call upon the main-menu to allow the user to change Theme or Difficulty mid-game reseting the timer and current score. This is achievable through a custom function which uses a built in method of the browser WebAPI to reload the current session from the browser rather than the cache:<br>
+```
+// Replay game function to refresh browser window.
+function replayGame() {
 
+    // Use of "window.location" to get the current URL and reloading to same via "reload(true)" to reload from browser instead of the cache.
+    window.location.reload(true);
+}
+```
 
+2. On page load, a modal pops up acting as the "main-menu" for the user, asking them to pick a difficulty and a theme and explaining the rules surrounding the concept of their selection and the impact they have on the game. The user cannot start the game without selecting a Difficulty and a Theme, and if they try to do so a Browser Alert, which is a built in method of the browser WebAPI, 
+will alert them of their intention to do so directing them back to the Main-Menu for selection.
+
+3. The Gameboard features a host of dynamically updated fields and an input field that the User can type into in an attempt to match the shown word:
+   * A "theme-span" Span element targetted via Javascript with the value of the Theme selection passed into to show the user there current Themed selection.
+   * A "diff-span" Span element targetted via Javascript with the value of the Difficulty selection passed into to show the user there current Difficulty selection.
+   * A "shown-word" Span element targetted via Javascript to show the user the currently generated Random word from the `setWord` method built in the "game" object, for them to attempt to match. Another Span element preceeds the "shown-word" element to act as a Pseudo-label to detail some direction to the User that this is the <i>"Word to Match"</i>.
+   * A "time-span" Span element detailing to the user the remaining time in seconds the user has to make a successful match the Game is over. As with the "shown-word" element, another Span element preceed the "time-span" element to act as a Pseudo-label to direct the user attention to the decrementing Time, <i>"Time to beat"</i>.
+   * The user input element is nested within a div and is part of the Bootstrap Frameworks "from-group" class of elements. It is a basic "input" form element set to accept "text" meaning alpha-numerical characters can be accepted along with special characters such as "/". "-" which may pop up in some of the Randomly generated words, as input elements have no 
+   automatic validation associated with them.<br>The user may input their proposed match into the input field as either Uppercase or Lowercase without causing detrimental affects to the outcome via checking the input versus the shown random word and then passing both values through the `toLowerCase()` built in JS function ensuring a case match. Doing this we are keeping the core methodology of the game intact in that we are checking for spelling only! 
+   * A small tooltip under the input field with a simple direction to <i>"Match the word shown in the given time....or GAME OVER!!"</i> for the user.
+   * A "score-span" Span element targetted via Javascript detailing the total score of the current game session. Again as before a Pseudo-label preceeds this dynamic element detailing, <i>"Total Score:"</i>
+ 
+4. Once the timer reaches zero, the game is instantly ended, and the user is presented with the "Game-over" modal which details several components relating to the game and the game build:
+   * The "Gameboard" display attribute is set to none to remove it from the DOM so the user is only displayed the Game over screen.
+   * The current score at the time of losing is shown to the user via targetting a span element via `querySelector` and setting it equal to the `game.score` value. 
+   * Some accompanying text thanking the user for playing and offering them the chance to provide feedback is supplied.
+   * A Bootstrap Framework inline list class was used on an un-ordered list to set the social icons in a horizontally aligned format. The iconography used for these links were obtained via FontAwesome and then styled via custom CSS. On hover, each social icon will rotate 360deg clockwise to add an animated feel to a mainly static display for the user. They also convert 
+   from the secondary color to the primary color to visualise the animation and draw the eye of the user. Each link will open in a new tab ensuring the user does not fully navigate away from the application and promoting user retention to return.
+   * A single button <i>"Replay"</i> is present to allow the user to return to the main-menu and restart the game with new preferences in Theme and Difficulty if they so wish. This function is achieved via an event listener linked to the "onclick" porperty of the Replay button that invokes the `replayGame()` function. 
+
+#### Future Features:
+* Add additional Themes and Difficulty options for the User to choose from on Main-menu to expand the games replayability.
+* Add 'High Score' Feature to store the best scores to local storage for the User to try and beat.
+* To create some sort of backend feature that would store all highscores across all users and display the best score on the game much like an Arcade game would have.
+* Create an <i>"Infinite"</i> & <i>"Un-Timed"</i> Mode for the User to just Learn to type at their own pace.
+* Create Theme-mode colors, typography and design elements to coincide with the Theme selection, e.g. if Pokemon, primary color = "red", secondary color = "white" with pokemon appearing alongside their respective name.
+* Higher degree of Defensive Design for the modals, to restrict the user to only have clickable areas on the Main-menu and Game-over modal when they are visisble.
+* Function to add bugs/errors direct from the Application to send direct to the Developer without the need of opening the User's email client.
+
+#### Removed Features:
+* One feature that was originally in the application was to change the background image to the theme selected by the User. For example, if the User selected Pokemon the default-bg class on the body element would be replaced by a pre-existing CSS class of "pokemon-bg" which would be appended too the element via these code steps in the `setTheme` method in the `game` object:
+```
+// Loop through each item in the originalData and remove class name from the body to ensure background and wordLists selection update accordingly.
+// Without this step, the user could not reselect a previous theme to change the background as the class would not be removed from the body.
+   game.originalData.forEach(item => document.body.classList.remove(`${item[0]}-bg`));
+// Change background by using template literal to insert theme value name as string & concat "-bg" to construct class name.
+   bodyBg.classList.add(`${value}-bg`);
+``` 
+The above code has since been removed, but to see the affect it had on the project view this commit:<br><a href="https://github.com/auxfuse/Milestone2/tree/46a05bf07d6353d0d3c399f40f482220effc2366" target="_blank"><i>Commit ending in "fc2366"</i></a>
+
+### Testing
+
+Continuous testing for this application was carried throughout the entire lifetime of the build. This was achieved through the Google Chrome devtools and a host of devices, from mobile to laptop and incorporating as many of the current mainstream browsers that are popular today, (Google Chrome, Firefox, Edge, Opera & Internet Explorer). 
+
+Using JSHint to validate the Project's Javascript file configured to accept jQuery & ES6 New JS features, returned with two direct warnings of which I could fix. This automatic test of the file allowed me to see where I had missing semi-colons from block of code. It also returned with warnings surrounding the use of `async functions` 
+being only natively available to ES8, however they still work as expected during my testing so I chose to not source alternative code to produce the same output to keep the JS file clean and structured efficiently.
+
+The project utilises as much vanilla Javascript as possibly to allow the developer to understand the language appropriately. jQuery was used in total of three times to target the modal elements to show/hide on event of window load, when Gameover was achieved or when the "Settings" Header nav-link was clicked. To convert these small 
+instances of jQuery to Vanilla Javascript would of encorporated more lines of code than deemed necessary or efficient use of time. With this in mind I chose to leave these as they are!
+
+Passing the html file contents through the W3C Validator for HTML resulted in no errors. However, the Bootstrap componentry of the application was tested extensively to ensure that the Mobile first Repsonsive Approach was achieved with this Project. The Application was tested extensively between my Home Desktop and Large Monitor 
+screen, and my Apple iPhone6s screen. If something did not look right during testing changes were made to the localhost preview DevTools and then copy and pasted from this test environment into my IDE before committing and pushing the update to my Repository to take permanent effect.
+
+The associated CSS file contents were regularly checked against the W3C Validator for CSS to ensure any errors were spotted throughout the developement of the style sheet. As with the HTML validation if any errors were present they were rectified via the localhost preview DevTools and then copy and pasted over to the IDE 
+environment before committing and pushing the updated code to my Github Repository. In tandem with using the W3C Validator for CSS, the CSS Autoprefixer was used to ensure the most up to date vendor prefixes were captured and detailed in the stylesheet enabling the cross-browser support some of the styles needed in order to work.
+
+The project itself was posted to the Peer-Code-Review channel of the Code Institute Slack Forum in a bid for others to help spot errors, potential bugs and problems, to try and break the application and for general feedback on the performance and functionality of the project. The results are as follows:
+   * The project lacked clear defensive design in that during a peer-review, one of my student colleagues was able to click outside of the Main-menu and Game-over modal thus creating an un-started session of the game allowing an infinite score hack by pressing enter.
+      * 
