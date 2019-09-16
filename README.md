@@ -43,11 +43,6 @@ application, and the CSS visuals, aswell as debugging for errors.
 size of same through small to large screen sizes.
 * <a href="https://realfavicongenerator.net/">Favicon Generator</a> ~ Used to create favicon from custom Logo I created for the project.
 
-### Future Features:
-* Add additional Themes, Theme backgrounds and lists for the user to choose from on Game start Menu.
-* Add 'High Score' Feature to store the best scores to local storage for the User to try and beat.
-* Create an 'Infinite & Un-Timed' Mode for the User to just Learn to type at their own pace.
-
 ### Deployment.
 This single-page application Game was developed in PyCharm IDE and version controlling was utilised via local (git) and online (github) repository
 technologies. 
@@ -213,3 +208,23 @@ function replayGame() {
    * Some accompanying text thanking the user for playing and offering them the chance to provide feedback is supplied.
    * A Bootstrap Framework inline list class was used on an un-ordered list to set the social icons in a horizontally aligned format. The iconography used for these links were obtained via FontAwesome and then styled via custom CSS. On hover, each social icon will rotate 360deg clockwise to add an animated feel to a mainly static display for the user. They also convert from the secondary color to the primary color to visualise the animation and draw the eye of the user. Each link will open in a new tab ensuring the user does not fully navigate away from the application and promoting user retention to return.
    * A single button <i>"Replay"</i> is present to allow the user to return to the main-menu and restart the game with new preferences in Theme and Difficulty if they so wish. This function is achieved via an event listener linked to the "onclick" porperty of the Replay button that invokes the `replayGame()` function. 
+
+#### Future Features:
+* Add additional Themes and Difficulty options for the User to choose from on Main-menu to expand the games replayability.
+* Add 'High Score' Feature to store the best scores to local storage for the User to try and beat.
+* To create some sort of backend feature that would store all highscores across all users and display the best score on the game much like an Arcade game would have.
+* Create an <i>"Infinite"</i> & <i>"Un-Timed"</i> Mode for the User to just Learn to type at their own pace.
+* Create Theme-mode colors, typography and design elements to coincide with the Theme selection, e.g. if Pokemon, primary color = "red", secondary color = "white" with pokemon appearing alongside their respective name.
+* Higher degree of Defensive Design for the modals, to restrict the user to only have clickable areas on the Main-menu and Game-over modal when they are visisble.
+* Function to add bugs/errors direct from the Application to send direct to the Developer without the need of opening the User's email client.
+
+#### Removed Features:
+* One feature that was originally in the application was to change the background image to the theme selected by the User. For example, if the User selected Pokemon the default-bg class on the body element would be replaced by a pre-existing CSS class of "pokemon-bg" which would be appended too the element via these code steps in the `setTheme` method in the `game` object:
+```
+// Loop through each item in the originalData and remove class name from the body to ensure background and wordLists selection update accordingly.
+// Without this step, the user could not reselect a previous theme to change the background as the class would not be removed from the body.
+   game.originalData.forEach(item => document.body.classList.remove(`${item[0]}-bg`));
+// Change background by using template literal to insert theme value name as string & concat "-bg" to construct class name.
+   bodyBg.classList.add(`${value}-bg`);
+``` 
+The above code has since been removed, but to see the affect it had on the project view this commit:<br><a href="https://github.com/auxfuse/Milestone2/tree/46a05bf07d6353d0d3c399f40f482220effc2366" target="_blank"><i>Commit ending in "fc2366"</i></a>
