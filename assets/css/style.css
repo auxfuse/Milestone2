@@ -1,3 +1,4 @@
+/* Font import */
 @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
 
 /* Global Styles */
@@ -5,6 +6,7 @@
 body {
     font-family: 'Bangers', sans-serif;
     height: 100vh;
+    font-size: 16px;
 }
 
     /* Default background */
