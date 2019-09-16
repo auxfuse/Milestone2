@@ -127,6 +127,11 @@ to ensure a user could read each and every letter/number/special character shown
     text to the Primary color justification. The Main menu modal, the Gameboard and the Game over modal all utilise the tertiary color as a solid contrast to the neon
     overarching illumination of the primary and secondary colors.
     
+    The default background of the game in general is a two-tone gradient dark on top fading out to the secondary color. 
+    
+    `background: linear-gradient(to bottom, #000000 0%, #000000 21%, #00dde2 100%);` 3-stops were used in the two-tone gradient to allow the bleed-out of the darker of the two colors to happen at a
+    predetermined point specified by myself @21% of the height of the total viewport height. 
+    
 3. Logo:
 
     The logo was custom created by myself as a play on the game name of "KeyWord!". The plain vector of the key image with the cut-out "word" offset in black made for a slightly mechanically
@@ -140,21 +145,41 @@ to ensure a user could read each and every letter/number/special character shown
         <img src="https://github.com/auxfuse/Milestone2/blob/master/assets/img/keywordLogo.png" alt="KeyWord! Logo" width="96" height="96"/>
     </h1>
     
-4. 
+4. Geometry: 
+
+    The prominent geometry of the game is square with rounded edges which are conceivable with the color scheme and the typography of the primary font. Each section of the game, whether that be
+    Main Menu Modal, the Gameboard or the Game Over Modal are square with black backgrounds, and a primary color assigned to the borders to offset them against the gradient of the body.
+    By using a common 2D shape for the main elements and components of the Game, it ensure a very easy solution and accompanying methodology approach to Mobile first design.
     
+5. Wireframing:
+
+    Wireframes for this project were created using Balsamiq, for Small and Large viewports to show the difference between them detailing how the elements would react to
+    the size differences. Each element was structurally planned out at this stage and even during the physical build of the application there wasn't much deviation from the original
+    planning.
+    * Large device Wireframe for the Main menu Modal:
+    
+    <h1 align="center">
+        <img src="assets/uxd/skeletonPlane/Welcome-screen.png" alt="wireframe1" title="Welcome screen Wireframe" width="500" height="250">
+    </h1>
+    
+    * Large device Wireframe for the Gameboard:
+    
+    <h1 align="center">
+        <img src="assets/uxd/skeletonPlane/Game-screen.png" alt="Wireframe1A" title="Gameboard Wireframe" width="500" height="250">
+    </h1>
+    
+    * Mobile device Wireframe for the Main menu Modal:
+    
+    <h1 align="center">
+        <img src="assets/uxd/skeletonPlane/Welcome-screen-mobile.png" alt="wireframe2" title="Welcome screen Mobile Wireframe" width="150" height="300">
+    </h1>
+    
+    * Mobile device Wireframe for the Gameboard:
+    
+    <h1 align="center">
+        <img src="assets/uxd/skeletonPlane/Game-screen-mobile.png" alt="wireframe2A" title="Gameboard screen Mobile Wireframe" width="150" height="300">
+    </h1>
         
-
-
-
-
-
-
-
-### Wireframes
-
-
-
-
 ### Features
 
 On page load, a modal pops up acting as the main-menu for the user, asking them to pick a difficulty and a theme and explaining the rules surrounding the concept
