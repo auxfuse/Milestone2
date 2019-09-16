@@ -256,4 +256,7 @@ environment before committing and pushing the updated code to my Github Reposito
 
 The project itself was posted to the Peer-Code-Review channel of the Code Institute Slack Forum in a bid for others to help spot errors, potential bugs and problems, to try and break the application and for general feedback on the performance and functionality of the project. The results are as follows:
    * The project lacked clear defensive design in that during a peer-review, one of my student colleagues was able to click outside of the Main-menu and Game-over modal thus creating an un-started session of the game allowing an infinite score hack by pressing enter.
-      * To overcome this obvious flaw, 
+   
+        To overcome this obvious flaw, for both modals I added `data-backdrop="static"` to not allow a user to click outside of the modal and close same, and `data-keyboard="false"` to remove pressing ESC to close the modals too. This closed a big flaw in my design and instantly acted against the bug that was found during the peer-review.
+   * The social icons linked to external websites such as Github, LinkedIn and Instagram were all missing `rel="noopener"`. This has now been fixed and amended to include same.
+   * 
