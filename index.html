@@ -21,7 +21,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
             <!-- Logo -->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" aria-label="Brand Logo & Link to refresh" href="index.html">
                 <img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord Logo">
             </a>
             <!-- Toggler Icon on mobile view -->
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto uppercase">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="settings">Settings<i class="fas fa-cogs"></i></a>
+                        <a class="nav-link" aria-label="Open Settings Menu" href="#" id="settings">Settings<i class="fas fa-cogs"></i></a>
                     </li>
                 </ul>
             </div>
@@ -54,7 +54,7 @@
                 <p class="time text-center">Time to beat: <span class="time-span" id="time-span">$time</span> seconds!</p>
                 <!-- Input field for user to match word, and for JS to check against word shown -->
                 <div class="form-group center-form game-input">
-                    <input type="text" class="form-control" id="user-input" placeholder="Type word shown!">
+                    <input type="text" class="form-control" aria-label="User input" id="user-input" placeholder="Type word shown!">
                 </div>
                 <p class="text-center tool-tip">Match the word shown in the given time....or GAME OVER!!</p>
                 <!-- Score visuals -->
@@ -87,7 +87,7 @@
                         </div>
                         <div class="form-group dropdown-selection">
                             <!-- Dropdown list with values set to determine game difficulty -->
-                            <select class="custom-select mr-sm-2 w-50 category-dropdown" id="difficulty" required="">
+                            <select class="custom-select mr-sm-2 w-50 category-dropdown" aria-label="Difficulty Selector" id="difficulty" required="">
                                 <option value="">Select Difficulty!</option>
                                 <option value="easy">Easy</option>
                                 <option value="medium">Medium</option>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="form-group dropdown-selection">
                             <!-- Dropdown list with values set to determine game theme and themed array to populate potential words for user to match -->
-                            <select class="custom-select mr-sm-2 w-50 category-dropdown" id="theme" required="">
+                            <select class="custom-select mr-sm-2 w-50 category-dropdown" aria-label="Theme Selector" id="theme" required="">
                                 <option value="">Select Theme!</option>
                                 <option value="pokemon">Pokemon Names</option>
                                 <option value="superhero">Superhero Names</option>
@@ -107,7 +107,7 @@
                         </div>
                         <div class="form-row start-btn">
                             <div class="col-auto">
-                                <button type="button" class="btn btn-success">Start</button>
+                                <button type="button" class="btn btn-success" aria-label="Start">Start</button>
                             </div>
                         </div>
                     </form>
@@ -155,7 +155,7 @@
                     <p class="thank-you text-center">To play again hit the <span class="replay">"Replay"</span> button.</p>
                     <div class="form-row replay-btn">
                         <div class="col-auto">
-                            <button type="button" class="btn btn-success replay-button">Replay!</button>
+                            <button type="button" class="btn btn-success replay-button" aria-label="Replay">Replay!</button>
                         </div>
                     </div>
 
