@@ -228,3 +228,18 @@ function replayGame() {
    bodyBg.classList.add(`${value}-bg`);
 ``` 
 The above code has since been removed, but to see the affect it had on the project view this commit:<br><a href="https://github.com/auxfuse/Milestone2/tree/46a05bf07d6353d0d3c399f40f482220effc2366" target="_blank"><i>Commit ending in "fc2366"</i></a>
+
+### Testing
+
+Continuous testing for this application was carried throughout the entire lifetime of the build. This was achieved through the Google Chrome devtools and a host of devices, from mobile to laptop and incorporating as many of the current mainstream browsers that are popular today, (Google Chrome, Firefox, Edge, Opera & Internet Explorer). 
+
+Using JSHint to validate the Project's Javascript file configured to accept jQuery & ES6 New JS features, returned with two direct warnings of which I could fix. This automatic test of the file allowed me to see where I had missing semi-colons from block of code. It also returned with warnings surrounding the use of `async functions` being only natively available to ES8, however they still work as expected during my testing so I chose to not source alternative code to produce the same output to keep the JS file clean and structured efficiently.
+
+The project utilises as much vanilla Javascript as possibly to allow the developer to understand the language appropriately. jQuery was used in total of three times to target the modal elements to show/hide on event of window load, when Gameover was achieved or when the "Settings" Header nav-link was clicked. To convert these small instances of jQuery to Vanilla Javascript would of encorporated more lines of code than deemed necessary or efficient use of time. With this in mind I chose to leave these as they are!
+
+Passing the html file contents through the W3C Validator for HTML resulted in no errors. However, the Bootstrap componentry of the application was tested extensively to ensure that the Mobile first Repsonsive Approach was achieved with this Project. The Application was tested extensively between my Home Desktop and Large Monitor screen, and my Apple iPhone6s screen. If something did not look right during testing changes were made to the localhost preview DevTools and then copy and pasted from this test environment into my IDE before committing and pushing the update to my Repository to take permanent effect.
+
+The associated CSS file contents were regularly checked against the W3C Validator for CSS to ensure any errors were spotted throughout the developement of the style sheet. As with the HTML validation if any errors were present they were rectified via the localhost preview DevTools and then copy and pasted over to the IDE environment before committing and pushing the updated code to my Github Repository. In tandem with using the W3C Validator for CSS, the CSS Autoprefixer was used to ensure the most up to date vendor prefixes were captured and detailed in the stylesheet enabling the cross-browser support some of the styles needed in order to work.
+
+The project itself was posted to the Peer-Code-Review channel of the Code Institute Slack Forum in a bid for others to help spot errors, potential bugs and problems, to try and break the application and for general feedback on the performance and functionality of the project. The results are as follows:
+`Add ammendments made via peer code review feedback` 
