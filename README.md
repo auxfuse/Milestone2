@@ -134,7 +134,7 @@ to ensure a user could read each and every letter/number/special character shown
     
 3. Logo:
 
-    The logo was custom created by myself as a play on the game name of "KeyWord!". The plain vector of the key image with the cut-out "word" offset in black made for a slightly mechanically
+    The logo was custom created by myself as a play on the game name of "KeyWord!". The plain vector of the key image with the cut-out "word" offset with transparency made for a slightly mechanically
     whimsical and fun feature to distinguish the game from a host of similar games in the real world marketplace. The logo was made in Microsoft Excel by importing a basic key vector and then overlaying
     shapes onto the vector in the Primary color. From their I used a textbox from Microsoft Excel with some basic font to create the "Word" in the Tertiary color and overlay onto the traced vector
     image. Finally the shapes and text were grouped together to flatten into one layer and then exported as a .png file to use within the project.
@@ -184,11 +184,32 @@ to ensure a user could read each and every letter/number/special character shown
 
 This project incorporates the Bootstrap Framework and DoM manipulation to present and feature the main elements of the application being the "Main-Menu Modal", the "Gameboard" and the "Game-Over Modal". The project's logical flow of elements is as follows:
 
-1. On page load, a modal pops up acting as the "main-menu" for the user, asking them to pick a difficulty and a theme and explaining the rules surrounding the concept of their selection and the impact they have on the game. The user cannot start the game without selecting a Difficulty and a Theme, and if they try to do so a Browser Alert, which is a built in method of the browser WebAPI, will alert them of their intention to do so directing them back to the Main-Menu for selection.
+1. The applications header has two small functions that act rather similarly to each other. Although similar to each other, I decided to keep them both in at their current functionality as they both use different methods to apply the same effects on the application.
+   * The logo is placed in the top-left position of the SPA as is customary with current branding conventions. The logo itself is wrapped in an anchor tag referenced to this page itself, thus acting as a <i>refresh</i>.
+   * The <i>"Settings"</i> navigation link is to act as a computed refresh to call upon the main-menu to allow the user to change Theme or Difficulty mid-game reseting the timer and current score. This is achievable through a custom function which uses a built in method of the browser WebAPI to reload the current session from the browser rather than the cache:<br>
+```
+// Replay game function to refresh browser window.
+function replayGame() {
 
-2. The Gameboard features a host of dynamically updated fields and an input field that the User can type into in an attempt to match the shown word:
+    // Use of "window.location" to get the current URL and reloading to same via "reload(true)" to reload from browser instead of the cache.
+    window.location.reload(true);
+}
+```
+
+2. On page load, a modal pops up acting as the "main-menu" for the user, asking them to pick a difficulty and a theme and explaining the rules surrounding the concept of their selection and the impact they have on the game. The user cannot start the game without selecting a Difficulty and a Theme, and if they try to do so a Browser Alert, which is a built in method of the browser WebAPI, will alert them of their intention to do so directing them back to the Main-Menu for selection.
+
+3. The Gameboard features a host of dynamically updated fields and an input field that the User can type into in an attempt to match the shown word:
    * A "theme-span" Span element targetted via Javascript with the value of the Theme selection passed into to show the user there current Themed selection.
    * A "diff-span" Span element targetted via Javascript with the value of the Difficulty selection passed into to show the user there current Difficulty selection.
-   * A "shown-word" Span element targetted via Javascript to show the user the currently generated Random word from the <i>setWord</i> method built in the "game" object, for them to attempt to match. Another Span element preceeds the "shown-word" element to act as a Pseudo-label to detail some direction to the User that this is the <i>"Word to Match"</i>.
+   * A "shown-word" Span element targetted via Javascript to show the user the currently generated Random word from the `setWord` method built in the "game" object, for them to attempt to match. Another Span element preceeds the "shown-word" element to act as a Pseudo-label to detail some direction to the User that this is the <i>"Word to Match"</i>.
    * A "time-span" Span element detailing to the user the remaining time in seconds the user has to make a successful match the Game is over. As with the "shown-word" element, another Span element preceed the "time-span" element to act as a Pseudo-label to direct the user attention to the decrementing Time, <i>"Time to beat"</i>.
    * The user input element is nested within a div and is part of the Bootstrap Frameworks "from-group" class of elements. It is a basic "input" form element set to accept "text" meaning alpha-numerical characters can be accepted along with special characters such as "/". "-" which may pop up in some of the Randomly generated words, as input elements have no automatic validation associated with them.<br>The user may input their proposed match into the input field as either Uppercase or Lowercase without causing detrimental affects to the outcome via checking the input versus the shown random word and then passing both values through the `toLowerCase()` built in JS function ensuring a case match. Doing this we are keeping the core methodology of the game intact in that we are checking for spelling only! 
+   * A small tooltip under the input field with a simple direction to <i>"Match the word shown in the given time....or GAME OVER!!"<i> for the user.
+   * A "score-span" Span element targetted via Javascript detailing the total score of the current game session. Again as before a Pseudo-label preceeds this dynamic element detailing, <i>"Total Score:"</i>
+ 
+4. Once the timer reaches zero, the game is instantly ended, and the user is presented with the "Game-over" modal which details several components relating to the game and the game build:
+   * The "Gameboard" display attribute is set to none to remove it from the DOM so the user is only displayed the Game over screen.
+   * The current score at the time of losing is shown to the user via targetting a span element via `querySelector` and setting it equal to the `game.score` value. 
+   * Some accompanying text thanking the user for playing and offering them the chance to provide feedback is supplied.
+   * A Bootstrap Framework inline list class was used on an un-ordered list to set the social icons in a horizontally aligned format. The iconography used for these links were obtained via FontAwesome and then styled via custom CSS. On hover, each social icon will rotate 360deg clockwise to add an animated feel to a mainly static display for the user. They also convert from the secondary color to the primary color to visualise the animation and draw the eye of the user. Each link will open in a new tab ensuring the user does not fully navigate away from the application and promoting user retention to return.
+   * A single button <i>"Replay"</i> is present to allow the user to return to the main-menu and restart the game with new preferences in Theme and Difficulty if they so wish. This function is achieved via an event listener linked to the "onclick" porperty of the Replay button that invokes the `replayGame()` function. 
