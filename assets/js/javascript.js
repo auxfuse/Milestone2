@@ -199,7 +199,7 @@ function eventListeners() {
 const observer = new MutationObserver(() => {
 
     if (modalMenu.style.display !== "block"){
-        gameboard.classList.remove(hide);
+        gameboard.classList.remove("hide");
     }
 });
     // Observe modalMenu element for any changes in the DOM structure.
