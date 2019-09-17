@@ -17,7 +17,7 @@ body {
     background: -o-linear-gradient(top, #000000 0%, #000000 21%, #00dde2 100%);
 }
 
-/* Modal */
+/* Main-menu Modal */
 
     /* Modal content is essentially the background plate, use of border-radius to create efficient UI */
 .modal-content {
@@ -54,6 +54,10 @@ body {
 }
 
     /* Modal user instructions */
+.underline {
+    text-decoration: underline;
+}
+
 .instructions-header {
     font-size: 1.2rem;
     color: #44ff78;
