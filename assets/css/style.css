@@ -12,6 +12,9 @@ body {
     /* Default background */
 .default-bg {
     background: linear-gradient(to bottom, #000000 0%, #000000 21%, #00dde2 100%);
+    /* Webkits obtained via autoprefixer.github.io */
+    background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(21%, #000000), to(#00dde2));
+    background: -o-linear-gradient(top, #000000 0%, #000000 21%, #00dde2 100%);
 }
 
 /* Modal */
@@ -87,6 +90,9 @@ body {
     /* Start button */
 .start-btn {
     justify-content: center;
+    /* Webkits obtained from autoprefixer.github.io */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
 }
 
 .btn-success {
@@ -138,6 +144,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* Webkits obtained from autoprefixer.github.io */
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     background-color: #000000;
     padding: 20px;
     border: 1px solid #44ff78;
@@ -194,6 +203,9 @@ body {
 
 .replay-btn {
     justify-content: center;
+    /* Webkits obtained from autoprefixer.github.io */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     margin-bottom: 20px;
 }
 
@@ -212,6 +224,7 @@ body {
     margin: 10px;
     color: #00dde2;
     transition: all 0.50s ease-in-out;
+    /* Webkits obtained from autoprefixer.github.io */
     -moz-transition: all 0.50s ease-in-out;
     -webkit-transition: all 0.50s ease-in-out;
     -o-transition: all 0.50s ease-in-out;
@@ -220,4 +233,7 @@ body {
 .social-links li a i:hover {
     color: #44ff78;
     transform: rotate(360deg);
+    /* Webkits obtained from autoprefixer.github.io */
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
 }
