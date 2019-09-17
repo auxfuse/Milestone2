@@ -135,6 +135,10 @@ body {
 
 /* Game board */
 
+.hide {
+    display: none;
+}
+
 .game {
     position: relative;
     height: 100%;
@@ -177,6 +181,7 @@ body {
     font-size: 2.2rem;
     text-decoration: underline;
     color: #44ff78;
+    /* Use of user-select: none to prevent users from copy & pasting the shown word */
     user-select: none;
 }
     /* Form control centered via margin: 0 auto and placeholder and input text centered */

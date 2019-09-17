@@ -189,16 +189,12 @@ function eventListeners() {
 =================================
 */
 
-/*  To hide or show "gameboard" element using observer and changing display property of modal and gameboard.
-    If main-menu modal is visible, e.g. display property set to "block", then hide "gameboard" element via setting the display
-    of the "gameboard" element to "none", otherwise show "gameboard" via setting diplay property to "block". */
+/*  Detect when the modalMenu display is not set to block, this happens when the modalMenu is closed and it's default display state
+    becomes "none". When this DOM change happens we remove the class of ".hide" from the gameboard to show it to the user. */
 const observer = new MutationObserver(() => {
 
-    if (modalMenu.style.display == "block"){
-        gameboard.style.display = "none";
-
-    } else {
-        gameboard.style.display = "block";
+    if (modalMenu.style.display !== "block"){
+        gameboard.classList.remove(hide);
     }
 });
 //  Observe modalMenu element for any changes in the DOM structure.
