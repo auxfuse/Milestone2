@@ -177,6 +177,7 @@ body {
     font-size: 2.2rem;
     text-decoration: underline;
     color: #44ff78;
+    user-select: none;
 }
     /* Form control centered via margin: 0 auto and placeholder and input text centered */
 .form-control {
