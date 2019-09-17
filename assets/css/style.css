@@ -146,11 +146,7 @@ body {
     transform: translate(-50%, -50%);
     /* Webkits obtained from autoprefixer.github.io */
     -webkit-transform: translate(-50%, -50%);
-<<<<<<< HEAD
     -ms-transform: translate(-50%, -50%);
-=======
-    -ms-transform: translate(-50%, -50%);        
->>>>>>> de02c75f458bbf8631f8d04ea5952b38892f13f8
     background-color: #000000;
     padding: 20px;
     border: 1px solid #44ff78;
@@ -240,8 +236,4 @@ body {
     /* Webkits obtained from autoprefixer.github.io */
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> de02c75f458bbf8631f8d04ea5952b38892f13f8

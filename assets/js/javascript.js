@@ -86,11 +86,7 @@ let game = {
 
     /*  Create random word and display via flooring the result to the shownWord element's innerText for the User. */
     setWord: () => {
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> de02c75f458bbf8631f8d04ea5952b38892f13f8
         const random = Math.floor(Math.random() * game.wordLists[game.selectedTheme].length);
         game.selectedWord = game.wordLists[game.selectedTheme][random];
 
@@ -120,11 +116,7 @@ let game = {
         game.time = game.time - 1;
     },
 
-<<<<<<< HEAD
     /*  Use of toLowerCase() built in js function to ensure case match versus the current shown word. On successful match,
-=======
-    /*  Use of toLowerCase() built in js function to ensure case match versus the current shown word. On successful match, 
->>>>>>> de02c75f458bbf8631f8d04ea5952b38892f13f8
         method resets the timer, generates a new word for the user, increments the score and clears the input field for re-entry. */
     matchWord: (value) => {
 
@@ -195,24 +187,14 @@ function eventListeners() {
 =================================
 */
 
-<<<<<<< HEAD
 /*  To hide or show "gameboard" element using observer and changing display property of modal and gameboard.
     If main-menu modal is visible, e.g. display property set to "block", then hide "gameboard" element via setting the display
     of the "gameboard" element to "none", otherwise show "gameboard" via setting diplay property to "block". */
-=======
-/*  To hide or show "gameboard" element using observer and changing display property of modal and gameboard. 
-    If main-menu modal is visible, e.g. display property set to "block", then hide "gameboard" element via setting the display
-    of the "gameboard" element to "none", otherwise show "gameboard" via setting diplay property to "block". */  
->>>>>>> de02c75f458bbf8631f8d04ea5952b38892f13f8
 const observer = new MutationObserver(() => {
 
     if (modalMenu.style.display == "block"){
         gameboard.style.display = "none";
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> de02c75f458bbf8631f8d04ea5952b38892f13f8
     } else {
         gameboard.style.display = "block";
     }
@@ -226,11 +208,7 @@ observer.observe(modalMenu, {attributes: true, childList: true});
 =================================
 */
 
-<<<<<<< HEAD
 /*  Fetch JSON files and populate wordLists object via like with like, e.g. "pokemon" json values populating "pokemon" property of wordLists object
-=======
-/*  Fetch JSON files and populate wordLists object via like with like, e.g. "pokemon" json values populating "pokemon" property of wordLists object 
->>>>>>> de02c75f458bbf8631f8d04ea5952b38892f13f8
     nested within "game" object, by fetching each item value and await for result to return and store in "request" local variable and then populating
     wordLists callback of "item" and assign it the parsed data using the Fetch API method "json()". */
 function getData() {
