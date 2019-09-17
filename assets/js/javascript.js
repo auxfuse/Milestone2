@@ -72,6 +72,8 @@ let game = {
             game.selectedDifficulty = 6;
         } else if (value === "hard"){
             game.selectedDifficulty  = 4;
+        } else if (value === "99 seconds"){
+            game.selectedDifficulty = 99;
         }
 
         diffSpan.innerText = value;
