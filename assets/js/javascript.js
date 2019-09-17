@@ -46,8 +46,8 @@ let game = {
         ['pokemon', 'https://raw.githubusercontent.com/sindresorhus/pokemon/master/data/en.json'],
         ['superhero', 'https://raw.githubusercontent.com/sindresorhus/superheroes/master/superheroes.json'],
         ['supervillain', 'https://raw.githubusercontent.com/sindresorhus/supervillains/master/supervillains.json'],
-        ['beaches', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/json/beaches.json'],
-        ['crossfit', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/json/crossfit.json']
+        ['beaches', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/data/beaches.json'],
+        ['crossfit', 'https://raw.githubusercontent.com/auxfuse/Milestone2/master/assets/data/crossfit.json']
     ],
 
     //  wordLists object key-value pair as arrays to hold fetched JSON values.
@@ -214,7 +214,7 @@ observer.observe(modalMenu, {attributes: true, childList: true});
 /**
  * Fetch JSON files and populate wordLists object via like with like, e.g. "pokemon".
  * By fetching each item value we await for result to return and store in "request" local variable.
- * Callback of "item" assigned with the passed data using the Fetch API method "json()".
+ * Callback of "item" assigned with the passed data using the Fetch API method "data()".
  */
 function getData() {
 
