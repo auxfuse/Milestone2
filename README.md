@@ -17,7 +17,7 @@
         * [5. Wireframing](#5-wireframing)
 * [Technology Used](#technology-used)
 * [Features](#features)
-    * [Future Features](#futures-features)
+    * [Future Features](#future-features)
     * [Removed Features](#removed-features)
 * [Testing](#testing)
     * [Defensive Design](#defensive-design)
