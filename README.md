@@ -4,12 +4,12 @@
 ## <img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord! Logo" width="32" height="32">_KeyWord! the Game_
 ***
 
-### What does it do and what does it need to fulfill?
+## What does it do and what does it need to fulfill?
 This milestone project creation is the culmination of learning and study from the fourth and fifth modules of the Full
 Stack Developer Course, Javacript Fundamentals & Interactive Frontend Development, to build a custom mobile-first fully
 responsive Vanilla javascript game called "KeyWord!" <img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord! Logo" width="16" height="16">.
 
-### Functionality of Project.
+## Functionality of Project
 At its core, this project is built using HTML5, CSS3 and Vanilla Javascript to make the individual features of the game
 work. The above three programming languages were used in conjunction with the Bootstrap Framework to ensure the project 
 itself is as responsive as possible for use amongst the current everyday screen device sizes such as, Mobile, Tablet and Laptop.
@@ -21,50 +21,6 @@ This project went outside the original brief as detailed by the course, in the h
 I have obtained since the last Milestone submission, and is my own custom version of a keyboard typing skills game I
 played as a child/young teen, (of which I can only vaguely remember now on our old family HP PC in the early 2000s and
 can't remember the name of).
-
-### Technologies & Tools Used.
-* HTML ~ main language used to structure the single-page application of the game and the user HUD.
-* CSS ~ styling language used to format and visually build upon the accompanying HTML.
-* Javasctipt ~ custom vanilla Javascript used to create the game functionality and accompanying game dynamic game elements.
-* <a href="https://getbootstrap.com/"> Bootstrap Framework</a> ~ Used as the core structuring layout building blocks of the website, ensuring mobile-frist design and responsive size display.
-* Some additional <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/#js">Imported Javascript & JQuery</a> ~ For the Modal and Responsive Navbar expand & collapse functionality.
-* <a href="https://www.jetbrains.com/pycharm/">PyCharm IDE</a> ~ PyCharm was used as the preferred IDE for this project.
-* PyCharm built-in Terminal ~ Used to commit to local repository and further push to Github Repo ensuring adequate version
-controlling throughout the life-cycle of the project build.
-* <a href="https://git-scm.com/">Git</a> ~ Installed on local device and integrated to PyCharm as a Plugin to enable version controlling.
-* <a href="https://github.com/auxfuse/Milestone1">Github</a> ~ Used to host the deployed website and repository of all previous versions of the build.
-* <a href="https://mycolor.space/">ColorSpace</a> ~ Used to find complimentary color schemes used throughout the game of my primary logo color.
-* <a href="http://eye-dropper.kepi.cz/">Eye Dropper (Color Picker)</a> ~ Open Source Google Chrome Extension used to obtain hexadecimal/rgba/hsl values of colours. Built by Kepi (<a href="https://github.com/kepi">Kepi's Github</a>)
-* <a href="https://www.pexels.com/">Pexels</a> ~ Online Free stock imagery. Used for providing 4 out of the 5 background images used to match the game's theme.
-* <a href="https://tinypng.com/">Tinypng.com</a> ~ Used to compress the background images without affecting image quality/integrity.
-* Google Chrome DevTools ~ Used to test the individual custom javascript functions, the responsiveness of the single-page
-application, and the CSS visuals, aswell as debugging for errors.
-* <a href="https://balsamiq.com/">Balsamiq</a> ~ Used for the creation of my pre-build wireframes showing the main elements and differences in
-size of same through small to large screen sizes.
-* <a href="https://realfavicongenerator.net/">Favicon Generator</a> ~ Used to create favicon from custom Logo I created for the project.
-
-### Deployment.
-This single-page application Game was developed in PyCharm IDE and version controlling was utilised via local (git) and online (github) repository
-technologies. 
- 
-Deploying this single-page application Game was acheived through Github pages by:
-* Selecting the Repository from my list in the Github Dashboard.
-* Navigating to <i>"Settings"</i> and to the <i>"Github Pages"</i> section.
-* From the <i>"Source"</i> section, click on the dropdown and select the the "Master Branch" from the associated list.
-* Once <i>"Master Branch"</i> is selected, the page will auto-refresh and navigate the user to the top of the page with a
-visual ribbon display detailing <i>"Github pages source saved</i>, indicating the success of the deployement.
-* The link to the website can then be found under the <i>"Github Pages"</i> section, with a ribbon notification stating:<br> __"Your site is published at "https://auxfuse.github.io/Milestone2/index.html".__
-
-To clone the website:
-* Select the Repository from the Github Dashboard.
-* Click on the <i>"Clone or download"</i> green button located above and to the right of the File Structure table.
-* Click on the <i>"clipboard icon"</i> to the right of the Git URL to copy the web URL of the Clone. 
-* Open your preferred Integrated Development Environment (IDE) and navigate to the terminal window.
-* Change the directory to where you want to clone the repository too. (In the case of PyCharm the directory path can be found through the <i>"Navigate"</i> tab).
-* Paste the Git URL copied from above and click <i>"Ok"</i>. (Again in the case of PyCharm once you click <i>"clone"</i>, Git Root mapping will be automatically set to the project Root directory).
-
----
----
 
 ## User Experience
 
@@ -174,6 +130,30 @@ to ensure a user could read each and every letter/number/special character shown
     <h1 align="center">
         <img src="assets/uxd/skeletonPlane/Game-screen-mobile.png" alt="wireframe2A" title="Gameboard screen Mobile Wireframe" width="150" height="300">
     </h1>
+
+## Technologies & Tools Used:
+* HTML, CSS & Javascript ~ main languages used to create this single-page application game.
+* <a href="https://getbootstrap.com/"> Bootstrap Framework</a> ~ Used as the core structuring layout building blocks of the website, ensuring mobile-frist design and responsive size display.
+* Some additional <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/#js">Imported Javascript & JQuery</a> ~ For the Modal and Responsive Navbar expand & collapse functionality.
+* <a href="https://www.jetbrains.com/pycharm/">PyCharm IDE</a> ~ PyCharm was used as the preferred IDE for this project.
+* PyCharm built-in Terminal ~ Used to commit to local repository and further push to Github Repo ensuring adequate version
+controlling throughout the life-cycle of the project build.
+* <a href="https://git-scm.com/">Git</a> ~ Installed on local device and integrated to PyCharm as a Plugin to enable version controlling.
+* <a href="https://github.com/auxfuse/Milestone1">Github</a> ~ Used to host the deployed website and repository of all previous versions of the build.
+* <a href="https://mycolor.space/">ColorSpace</a> ~ Used to find complimentary color schemes used throughout the game of my primary logo color.
+* <a href="http://eye-dropper.kepi.cz/">Eye Dropper (Color Picker)</a> ~ Open Source Google Chrome Extension used to obtain hexadecimal/rgba/hsl values of colours. Built by Kepi (<a href="https://github.com/kepi">Kepi's Github</a>)
+* <a href="https://www.pexels.com/">Pexels</a> ~ Online Free stock imagery. Used for providing 4 out of the 5 background images used to match the game's theme.
+* <a href="https://tinypng.com/">Tinypng.com</a> ~ Used to compress the logo without affecting image quality/integrity.
+* Google Chrome DevTools ~ Used to test the individual custom javascript functions, the responsiveness of the single-page
+application, and the CSS visuals, aswell as debugging for errors.
+* <a href="https://balsamiq.com/">Balsamiq</a> ~ Used for the creation of my pre-build wireframes showing the main elements and differences in
+size of same through small to large screen sizes.
+* <a href="https://realfavicongenerator.net/">Favicon Generator</a> ~ Used to create favicon from custom Logo I created for the project.
+* <a href="https://validator.w3.org/">W3C HTML Validator</a> & <a href="https://validator.w3.org/">W3C CSS Validator</a> & <a href="https://jshint.com/">JSHint</a> ~ Used to check the validity and efficiency of my code.
+* <a href="https://autoprefixer.github.io/">Autoprefixer CSS Online</a> ~ Used to check for possible webkits required in the applications stylesheet ensuring Cross-browser support.
+
+---
+---
         
 ### Features
 
@@ -283,5 +263,51 @@ The project has a couple of remaining bugs found during extensive testing amongs
 * Internet Explorer will not recognise Arrow functions thus the game fails to properly load on that browser entirely.
 * Autofocus works well on the userInput in Google Chrome and the Opera browsers, however it does not work as expected on Microsoft Edge or Firefox.
 
+### Deployment.
+This single-page application Game was developed in PyCharm IDE and version controlling was utilised via local (git) and online (github) repository
+technologies. 
+ 
+Deploying this single-page application Game was acheived through Github pages by:
+* Selecting the Repository from my list in the Github Dashboard.
+* Navigating to <i>"Settings"</i> and to the <i>"Github Pages"</i> section.
+* From the <i>"Source"</i> section, click on the dropdown and select the the "Master Branch" from the associated list.
+* Once <i>"Master Branch"</i> is selected, the page will auto-refresh and navigate the user to the top of the page with a
+visual ribbon display detailing <i>"Github pages source saved</i>, indicating the success of the deployement.
+* The link to the website can then be found under the <i>"Github Pages"</i> section, with a ribbon notification stating:<br> __"Your site is published at "https://auxfuse.github.io/Milestone2/index.html".__
+
+To clone the website:
+* Select the Repository from the Github Dashboard.
+* Click on the <i>"Clone or download"</i> green button located above and to the right of the File Structure table.
+* Click on the <i>"clipboard icon"</i> to the right of the Git URL to copy the web URL of the Clone. 
+* Open your preferred Integrated Development Environment (IDE) and navigate to the terminal window.
+* Change the directory to where you want to clone the repository too. (In the case of PyCharm the directory path can be found through the <i>"Navigate"</i> tab).
+* Paste the Git URL copied from above and click <i>"Ok"</i>. (Again in the case of PyCharm once you click <i>"clone"</i>, Git Root mapping will be automatically set to the project Root directory).
+
 ### Credits
 
+Three of the data sources are sourced via a Github Profile by <a href="https://github.com/sindresorhus">Sindre Sorhus</a>, Pokemon, Superheroes and Supervillains. 
+
+All webkits detailed in the CSS were obtained via <a href="https://autoprefixer.github.io/">Autoprefixer CSS Online</a>.
+
+<a href="https://realfavicongenerator.net/">Real Favicon Generator</a> was used to compress and produce the favicon.ico file, and the code to implement
+the favicon was researched and found through <a href="https://stackoverflow.com/questions/11893478/add-favicon-to-website">Stack Overflow</a>.
+
+### Special Thanks & Acknowledgements
+
+1. To my mentor, <a href="https://github.com/5pence">Spencer Barriball</a>, for incredible mentoring from supporting my idea of creating a game with Vanilla Javascript, to the strategy to use for the project, and for assisting during my project reviews with
+great critique and potential solutions.
+
+2. To a fellow student turned Alumni, <a href="https://github.com/nazarja">Sean Murphy</a> for incredible assistance in many back and forth conversation on logic, structure and syntax in Vanilla JS programming,
+who was always available and very generous with his time whenever I had a question or stuck on a problem and for providing multiple live code example to assist in my learning and understanding!
+
+3. To all in the #peer-code-review channel of Slack without whom, I would not have known of or been able to fix the abundant bugs and potential flaws, and for providing potential
+solutions to same:
+    * <a href="https://github.com/coderbeez">Edel O' Sullivan</a> & her son, Jack, for trialing the games effectiveness with kids!
+    * <a href="https://github.com/Eventyret">Simen Daehlin</a>
+    * <a href="https://github.com/JohnL3">John Long</a>
+    * <a href="https://github.com/AJGreaves">Anna Greaves</a>
+    
+4. * To my fellow students in Code Institute and to the staff and mentors who converse & frequent Slack regularly with their own queries/ideas & opinions, and assisting with mine, to help me better understand all facets of this course!
+
+##### Disclaimer:
+This project was created for educational use. The Accreditation certificate was created by myself and is purely for design purposes only, and added to this project as a Mock-up example.
