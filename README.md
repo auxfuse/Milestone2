@@ -7,7 +7,7 @@
 
 * [Functionality of Project](#Functionality_of_Project)
 
-* [User Experience](#User_Experience.)
+* [User Experience](#User_Experience)
     * [User Stories](#User_Stories)
     * [Design](#Design)
         * [1. Font](#1._Font)
