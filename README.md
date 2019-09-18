@@ -229,7 +229,7 @@ was fulfilled by myself by creating multiple scenarios for a particular session 
 * Opening the application, and using the DevTools and setting breakpoints on the "if/else" functions to test for redundant instances of the logical conditions, an example would be adding a breakpoint and stepping
  through the code until the breakpoint was hit to ensure each step leading to the breakpoint functioned as expected, such as the gameClock method setting the parameter to True and then decrementing the game.time until it reached "0". Once "0" was hit would the Gameover modal display, if No then debug and rectify code when solved, if Yes, move on to next check (See image):
 <h1 align="center">
-        <img src="assets/img/ManualTestingTimer#1.PNG" alt="Manual Testing Image" title="Manual Testing Image" width="600" height="300">
+        <img src="assets/img/manualTestTimer.png" alt="Manual Testing Image" title="Manual Testing Image" width="600" height="300">
 </h1>
 
 Continuous testing for this application was carried throughout the entire lifetime of the build. This was achieved through the Google Chrome devtools and a host of devices, from mobile to laptop and incorporating as many of the current mainstream browsers that are popular today, (Google Chrome, Firefox, Edge, Opera & Internet Explorer).
