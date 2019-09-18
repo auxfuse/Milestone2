@@ -240,7 +240,10 @@ The above code has since been removed, but to see the affect it had on the proje
 
 ### Testing
 
-Continuous testing for this application was carried throughout the entire lifetime of the build. This was achieved through the Google Chrome devtools and a host of devices, from mobile to laptop and incorporating as many of the current mainstream browsers that are popular today, (Google Chrome, Firefox, Edge, Opera & Internet Explorer). 
+Continuous testing for this application was carried throughout the entire lifetime of the build. This was achieved through the Google Chrome devtools and a host of devices, from mobile to laptop and incorporating as many of the current mainstream browsers that are popular today, (Google Chrome, Firefox, Edge, Opera & Internet Explorer).
+
+The application failed to load the javascript file at all on Internet Explorer due to the use of Arrow functions used through the code. I decided that the effort needed to fix this far outweighed the need for the application to work on Internet Explorer
+as the browser itself is a legacy browser and not in as much circulation as the other browsers anymore. I did not have access to desktop/laptop version of Safari, so the project was not tested on that browser.
 
 Using JSHint to validate the Project's Javascript file configured to accept jQuery & ES6 New JS features, returned with two direct warnings of which I could fix. This automatic test of the file allowed me to see where I had missing semi-colons from block of code. It also returned with warnings surrounding the use of `async functions` 
 being only natively available to ES8, however they still work as expected during my testing so I chose to not source alternative code to produce the same output to keep the JS file clean and structured efficiently.
@@ -249,14 +252,36 @@ The project utilises as much vanilla Javascript as possibly to allow the develop
 instances of jQuery to Vanilla Javascript would of encorporated more lines of code than deemed necessary or efficient use of time. With this in mind I chose to leave these as they are!
 
 Passing the html file contents through the W3C Validator for HTML resulted in no errors. However, the Bootstrap componentry of the application was tested extensively to ensure that the Mobile first Repsonsive Approach was achieved with this Project. The Application was tested extensively between my Home Desktop and Large Monitor 
-screen, and my Apple iPhone6s screen. If something did not look right during testing changes were made to the localhost preview DevTools and then copy and pasted from this test environment into my IDE before committing and pushing the update to my Repository to take permanent effect.
+screen, my Apple iPhone6s Personal Mobile as well as a Samsung Galaxy S9 Mobile phone. The application worked well on mobile devices although when a user needed to type into the userInput field the touchscreen keyboard displayed by phone caused in some cases 50% of the mobile screen to be obscured which ultimately was not great User experience.
+Aside from that, if something did not look right during testing changes were made to the localhost preview DevTools and then copy and pasted from this test environment into my IDE before committing and pushing the update to my Repository to take permanent effect.
 
 The associated CSS file contents were regularly checked against the W3C Validator for CSS to ensure any errors were spotted throughout the developement of the style sheet. As with the HTML validation if any errors were present they were rectified via the localhost preview DevTools and then copy and pasted over to the IDE 
 environment before committing and pushing the updated code to my Github Repository. In tandem with using the W3C Validator for CSS, the CSS Autoprefixer was used to ensure the most up to date vendor prefixes were captured and detailed in the stylesheet enabling the cross-browser support some of the styles needed in order to work.
 
-The project itself was posted to the Peer-Code-Review channel of the Code Institute Slack Forum in a bid for others to help spot errors, potential bugs and problems, to try and break the application and for general feedback on the performance and functionality of the project. The results are as follows:
-   * The project lacked clear defensive design in that during a peer-review, one of my student colleagues was able to click outside of the Main-menu and Game-over modal thus creating an un-started session of the game allowing an infinite score hack by pressing enter.
+The project itself was posted to the Peer-Code-Review channel of the Code Institute Slack Forum in a bid for others to help spot errors, potential bugs and problems, to try and break the application and for general feedback on the performance and functionality of the project. The results for some of the bigger flaws are as follows:
+   * The project lacked clear defensive design in that during a peer-review, one of my peer-review colleagues was able to click outside of the Main-menu and Game-over modal thus creating an un-started session of the game allowing an infinite score hack by pressing enter.
    
         To overcome this obvious flaw, for both modals I added `data-backdrop="static"` to not allow a user to click outside of the modal and close same, and `data-keyboard="false"` to remove pressing ESC to close the modals too. This closed a big flaw in my design and instantly acted against the bug that was found during the peer-review.
    * The social icons linked to external websites such as Github, LinkedIn and Instagram were all missing `rel="noopener"`. This has now been fixed and amended to include same.
-   * 
+   * The time scales set at 8 for easy, 6 for medium and 4 for hard were deemed to extreme for the inexperienced typist. To combat this and to incorporate for a multitude of experience
+   groups, I added a fun "99-second Mode", which gave the user 99 seconds to complete the word and still gain a point for their efforts. After testing this with my own children it was
+   deemed a much greater success for them than the other timed modes, and overall experience amongst my peers was greatly improved too.
+   * The main gameboard would flicker on page load causing some "bad UX", to rectify this a custom class was added to the element in html and targetted via css to set the display to "none" by default.
+   When the user clicked on "start" in the Main-menu modal to start a game, the observer would detect the change in the modal DOM state and remove that class from the element thus making it visible again.
+   * Another bug, more so considered a "Cheat" or "Hack" was the ability to quickly copy and paste the shown word into the user input to automatically pass the matchWord function validation. To compensate for this flaw,
+   the html element for the shownWord was targetted via css and "user-select" property was set to "none". Code below:
+   ```
+   .shown-word {
+    font-size: 2.2rem;
+    text-decoration: underline;
+    color: #44ff78;
+    /* Use of user-select: none to prevent users from copy & pasting the shown word */
+    user-select: none;
+   ```
+   
+The project has a couple of remaining bugs found during extensive testing amongst the multiple browsers to hand:
+* Internet Explorer will not recognise Arrow functions thus the game fails to properly load on that browser entirely.
+* Autofocus works well on the userInput in Google Chrome and the Opera browsers, however it does not work as expected on Microsoft Edge or Firefox.
+
+### Credits
+

@@ -184,6 +184,7 @@ body {
     /* Use of user-select: none to prevent users from copy & pasting the shown word */
     user-select: none;
 }
+
     /* Form control centered via margin: 0 auto and placeholder and input text centered */
 .form-control {
     width: 65%;
