@@ -253,7 +253,7 @@ environment before committing and pushing the updated code to my Github Reposito
 The project itself was posted to the Peer-Code-Review channel of the Code Institute Slack Forum in a bid for others to help spot errors, potential bugs and problems, to try and break the application and for general feedback on the performance and functionality of the project. The results for some of the bigger flaws are as follows:
    * The project lacked clear defensive design in that during a peer-review, one of my peer-review colleagues was able to click outside of the Main-menu and Game-over modal thus creating an un-started session of the game allowing an infinite score hack by pressing enter.
    
-        To overcome this obvious flaw, for both modals I added `data-backdrop="static"` to not allow a user to click outside of the modal and close same, and `data-keyboard="false"` to remove pressing ESC to close the modals too. This closed a big flaw in my design and instantly acted against the bug that was found during the peer-review.
+        To overcome this obvious flaw, for both modals I added `data-backdrop="static"` to not allow a user to click outside of the modal and close same, and `data-keyboard="false"` to remove pressing ESC to close the modals too.This closed a big flaw in my design and instantly acted against the bug that was found during the peer-review.
    * The social icons linked to external websites such as Github, LinkedIn and Instagram were all missing `rel="noopener"`. This has now been fixed and amended to include same.
    * The time scales set at 8 for easy, 6 for medium and 4 for hard were deemed to extreme for the inexperienced typist. To combat this and to incorporate for a multitude of experience
    groups, I added a fun "99-second Mode", which gave the user 99 seconds to complete the word and still gain a point for their efforts. After testing this with my own children it was
@@ -271,6 +271,9 @@ The project itself was posted to the Peer-Code-Review channel of the Code Instit
     user-select: none;
     }
    ```
+##### Defensive Design:   
+All of the above bugs and solutions allowed me. the Developer, to think about Defensive Programming/Design, such as the continuation of a piece of software against unforeseen circumstances occurring in the application. In this case
+the biggest unforeseen circumstance for me was the "User", (my peers in the peer-review-channel), who found multiple bugs and errors even after extensive testing from myself the Developer.
    
 The project has a couple of remaining bugs found during extensive testing amongst the multiple browsers to hand:
 * Internet Explorer will not recognise Arrow functions thus the game fails to properly load on that browser entirely.
