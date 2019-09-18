@@ -220,6 +220,19 @@ The above code has since been removed, but to see the affect it had on the proje
 
 ### Testing
 
+The project's testing was completely void of any automatic testing such as Jasmine/Enzyme or Jest, due to the sheer knowledge gap in this area of testing I have. Manual testing for the majority of the application
+was fulfilled by myself by creating multiple scenarios for a particular session and to try and document any errors/random side-effects captured in the DevTools.
+
+<i>A typical testing session would entail:</i>
+* Loading the game and forcing browser refresh multiple times to try and capture any Fetch hangups.
+* Multi-click instance on several of the interactable elements.
+* Opening the application, and using the DevTools and setting breakpoints on the "if/else" functions to test for redundant instances of the logical conditions, an example would be adding a breakpoint and stepping
+ through the code until the breakpoint was hit to ensure each step leading to the breakpoint functioned as expected, such as the gameClock method setting the parameter to True and then decrementing the game.time until it reached "0". Once "0" was hit would the Gameover modal display, if No then debug and rectify code when solved, if Yes, move on to next check (See image):
+<h1 align="center">
+        <img src="assets/img/ManualTestingTimer#1.png" alt="wireframe2A" title="Gameboard screen Mobile Wireframe" width="600" height="300">
+</h1>
+* 
+
 Continuous testing for this application was carried throughout the entire lifetime of the build. This was achieved through the Google Chrome devtools and a host of devices, from mobile to laptop and incorporating as many of the current mainstream browsers that are popular today, (Google Chrome, Firefox, Edge, Opera & Internet Explorer).
 
 The application failed to load the javascript file at all on Internet Explorer due to the use of Arrow functions used through the code. I decided that the effort needed to fix this far outweighed the need for the application to work on Internet Explorer
@@ -307,7 +320,7 @@ solutions to same:
     * <a href="https://github.com/JohnL3">John Long</a> for breaking my game and allowing me to learn about physical defensive design.
     * <a href="https://github.com/AJGreaves">Anna Greaves</a> for always providing great feedback and friendship through Slack.
     
-4. * To my fellow students in Code Institute and to the staff and mentors who converse & frequent Slack regularly with their own queries/ideas & opinions, and assisting with mine, to help me better understand all facets of this course!
+4. To my fellow students in Code Institute and to the staff and mentors who converse & frequent Slack regularly with their own queries/ideas & opinions, and assisting with mine, to help me better understand all facets of this course!
 
 ##### Disclaimer:
 This project was created for educational use. The Accreditation certificate was created by myself and is purely for design purposes only, and added to this project as a Mock-up example.
