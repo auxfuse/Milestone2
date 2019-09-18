@@ -49,6 +49,8 @@ I have obtained since the last Milestone submission, and is my own custom versio
 played as a child/young teen, (of which I can only vaguely remember now on our old family HP PC in the early 2000s and
 can't remember the name of).
 
+[Back to Top](#Table_of_Contents)
+
 ## User Experience.
 
 #### User Stories:
@@ -156,6 +158,8 @@ planning.
     <img src="assets/uxd/skeletonPlane/Game-screen-mobile.png" alt="wireframe2A" title="Gameboard screen Mobile Wireframe" width="150" height="300">
 </h1>
 
+[Back to Top](#Table_of_Contents)
+
 ## Technology Used.
 
 #### Languages, Frameworks, Editors & Version Control:
@@ -179,7 +183,9 @@ size of same through small to large screen sizes.
 * <a href="https://realfavicongenerator.net/">Favicon Generator</a> ~ Used to create favicon from custom Logo I created for the project.
 * <a href="https://validator.w3.org/">W3C HTML Validator</a> & <a href="https://validator.w3.org/">W3C CSS Validator</a> & <a href="https://jshint.com/">JSHint</a> ~ Used to check the validity and efficiency of my code.
 * <a href="https://autoprefixer.github.io/">Autoprefixer CSS Online</a> ~ Used to check for possible webkits required in the applications stylesheet ensuring Cross-browser support.
-    
+
+[Back to Top](#Table_of_Contents)
+
 ## Features.
 
 This project incorporates the Bootstrap Framework and DoM manipulation to present and feature the main elements of the application being the "Main-Menu Modal", the "Gameboard" and the "Game-Over Modal". The project's logical flow of elements is as follows:
@@ -242,6 +248,8 @@ will alert them of their intention to do so directing them back to the Main-Menu
    bodyBg.classList.add(`${value}-bg`);
 ``` 
 The above code has since been removed, but to see the affect it had on the project view this commit:<br><a href="https://github.com/auxfuse/Milestone2/tree/46a05bf07d6353d0d3c399f40f482220effc2366" target="_blank"><i>Commit ending in "fc2366"</i></a>
+
+[Back to Top](#Table_of_Contents)
 
 ## Testing.
 
@@ -306,6 +314,8 @@ The project has a couple of remaining bugs found during extensive testing amongs
 * Internet Explorer will not recognise Arrow functions thus the game fails to properly load on that browser entirely.
 * Autofocus works well on the userInput in Google Chrome and the Opera browsers, however it does not work as expected on Microsoft Edge or Firefox.
 
+[Back to Top](#Table_of_Contents)
+
 ## Deployment.
 This single-page application Game was developed in PyCharm IDE and version controlling was utilised via local (git) and online (github) repository
 technologies. 
@@ -325,6 +335,8 @@ To clone the website:
 * Open your preferred Integrated Development Environment (IDE) and navigate to the terminal window.
 * Change the directory to where you want to clone the repository too. (In the case of PyCharm the directory path can be found through the <i>"Navigate"</i> tab).
 * Paste the Git URL copied from above and click <i>"Ok"</i>. (Again in the case of PyCharm once you click <i>"clone"</i>, Git Root mapping will be automatically set to the project Root directory).
+
+[Back to Top](#Table_of_Contents)
 
 ## Credits.
 
@@ -357,3 +369,5 @@ solutions to same:
 4. To my fellow students in Code Institute and to the staff and mentors who converse & frequent Slack regularly with their own queries/ideas & opinions, and assisting with mine, to help me better understand all facets of this course!
 
 ###### <i>Disclaimer: This project was created for educational use only as part of the Code Institute Full Stack Software Development Course for Milestone 2 Grading!</i>
+
+[Back to Top](#Table_of_Contents)
