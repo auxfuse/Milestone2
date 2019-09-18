@@ -303,9 +303,9 @@ who was always available and very generous with his time whenever I had a questi
 3. To all in the #peer-code-review channel of Slack without whom, I would not have known of or been able to fix the abundant bugs and potential flaws, and for providing potential
 solutions to same:
     * <a href="https://github.com/coderbeez">Edel O' Sullivan</a> & her son, Jack, for trialing the games effectiveness with kids!
-    * <a href="https://github.com/Eventyret">Simen Daehlin</a>
-    * <a href="https://github.com/JohnL3">John Long</a>
-    * <a href="https://github.com/AJGreaves">Anna Greaves</a>
+    * <a href="https://github.com/Eventyret">Simen Daehlin</a> for taking a lot of time to critique my project and provide solutions to same.
+    * <a href="https://github.com/JohnL3">John Long</a> for breaking my game and allowing me to learn about physical defensive design.
+    * <a href="https://github.com/AJGreaves">Anna Greaves</a> for always providing great feedback and friendship through Slack.
     
 4. * To my fellow students in Code Institute and to the staff and mentors who converse & frequent Slack regularly with their own queries/ideas & opinions, and assisting with mine, to help me better understand all facets of this course!
 
