@@ -4,9 +4,7 @@
 ## Table of Contents:
 
 * [What does it do and what does it need to fulfill?](#what-does-it-do-and-what-does-it-need-to-fulfill)
-
 * [Functionality of Project](#functionality-of-project)
-
 * [User Experience](#user-experience)
     * [User Stories](#user-stories)
     * [Design](#design)
