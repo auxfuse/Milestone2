@@ -1,7 +1,36 @@
 # Milestone Project 2
 ***
 
+## Table of Contents:
+
+* [What does it do and what does it need to fulfill?](#What_does_it_do_and_what_does_it_need_to_fulfill?)
+
+* [Functionality of Project](#Functionality_of_Project)
+
+* [User Experience](#User_Experience.)
+    * [User Stories](#User_Stories:)
+    * [Design](#Design)
+        * [1. Font](#1._Font:)
+        * [2. Color Scheme](#2._Color_Scheme:)
+        * [3. Logo](#3._Logo:)
+        * [4. Geometry](#4._Geometry:)
+        * [5. Wireframing](#5._Wireframing:)
+* [Technology Used](#Technology_Used.)
+    * [Languages, Frameworks, Editors & Version Control](#Languages,_Frameworks,_Editors_&_Version_Control:)
+    * [Tools Used](#Tools_Used:)
+* [Features](#Features.)
+    * [Future Features](#Futures_Features:)
+    * [Removed Features](#Removed_Features:)
+* [Testing](#Testing.)
+    * [Defensive Design](#Defensive_Design:)
+* [Deployment](#Deployment.)
+* [Credits](#Credits.)
+    * [Special Thanks & Acknowledgements](#_Special_Thanks_&_Acknowledgements:)
+
+***
+
 ## <img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord! Logo" width="32" height="32">_KeyWord! the Game_
+
 ***
 
 ## What does it do and what does it need to fulfill?
@@ -58,76 +87,76 @@ In general the design of the game is pretty straight forward, a Single-Page appl
 utilises a single index.html file in conjunction with the Bootstrap Framework to ensure Mobile first fully responsive design. When considering design elements
 for this project, a retro-ish vibe for the typography and color scheme came to mind. 
 
-1. Font:
+##### 1. Font:
 
-    The project has a main font of <a href="https://fonts.google.com/specimen/Bangers">'Bangers'</a> which was imported via the head element of the html file from Google Fonts, 
+The project has a main font of <a href="https://fonts.google.com/specimen/Bangers">'Bangers'</a> which was imported via the head element of the html file from Google Fonts, 
 with the backup font being set to a default of 'Sans-serif'. The straight forward capitalised style of 'Bangers' made it easily recognisable for each character of the alphabet
 to ensure a user could read each and every letter/number/special character shown.
 
-2. Color Scheme:
+##### 2. Color Scheme:
     
-    Two primary conflicting colors were conceived when creating this project:
-    * ![#44ff78](https://placehold.it/15/44ff78/000000?text=+) `#44ff78` - Primary color
-    * ![#00dde2](https://placehold.it/15/00dde2/000000?text=+) `#00dde2` - Secondary color
-    * ![#000000](https://placehold.it/15/000000/000000?text+=) `#000000` - Tertiary color
-    
-    The primary color was used as the dominant color in the logo and to draw the attention to interactive elements in the Main menu and to the focus elements
-    such as the "shown word" or the "remaining time" to the user on the gameboard. The secondary color was used as a continuous palette choice of the basic accompanying
-    text to the Primary color justification. The Main menu modal, the Gameboard and the Game over modal all utilise the tertiary color as a solid contrast to the neon
-    overarching illumination of the primary and secondary colors.
-    
-    The default background of the game in general is a two-tone gradient dark on top fading out to the secondary color. 
-    
-    `background: linear-gradient(to bottom, #000000 0%, #000000 21%, #00dde2 100%);` 3-stops were used in the two-tone gradient to allow the bleed-out of the darker of the two colors to happen at a
-    predetermined point specified by myself @21% of the height of the total viewport height. 
-    
-3. Logo:
+Two primary conflicting colors were conceived when creating this project:
+* ![#44ff78](https://placehold.it/15/44ff78/000000?text=+) `#44ff78` - Primary color
+* ![#00dde2](https://placehold.it/15/00dde2/000000?text=+) `#00dde2` - Secondary color
+* ![#000000](https://placehold.it/15/000000/000000?text+=) `#000000` - Tertiary color
 
-    The logo was custom created by myself as a play on the game name of "KeyWord!". The plain vector of the key image with the cut-out "word" offset with transparency made for a slightly mechanically
-    whimsical and fun feature to distinguish the game from a host of similar games in the real world marketplace. The logo was made in Microsoft Excel by importing a basic key vector and then overlaying
-    shapes onto the vector in the Primary color. From their I used a textbox from Microsoft Excel with some basic font to create the "Word" in the Tertiary color and overlay onto the traced vector
-    image. Finally the shapes and text were grouped together to flatten into one layer and then exported as a .png file to use within the project.
-    
-    This .png file was passed through TinyPNG.com resulting in the smallest possible size whilst maintaining the current high-res image and the original aspect ratio. The newly compressed .png file of
-    the logo was saved into an "img" folder within the "assets" folder of the Project Directory where it can be accessed and utilised as part of the project.
-    <h1 align="center">
-        <img src="https://github.com/auxfuse/Milestone2/blob/master/assets/img/keywordLogo.png" alt="KeyWord! Logo" width="96" height="96"/>
-    </h1>
-    
-4. Geometry: 
+The primary color was used as the dominant color in the logo and to draw the attention to interactive elements in the Main menu and to the focus elements
+such as the "shown word" or the "remaining time" to the user on the gameboard. The secondary color was used as a continuous palette choice of the basic accompanying
+text to the Primary color justification. The Main menu modal, the Gameboard and the Game over modal all utilise the tertiary color as a solid contrast to the neon
+overarching illumination of the primary and secondary colors.
 
-    The prominent geometry of the game is square with rounded edges which are conceivable with the color scheme and the typography of the primary font. Each section of the game, whether that be
-    Main Menu Modal, the Gameboard or the Game Over Modal are square with black backgrounds, and a primary color assigned to the borders to offset them against the gradient of the body.
-    By using a common 2D shape for the main elements and components of the Game, it ensure a very easy solution and accompanying methodology approach to Mobile first design.
-    
-5. Wireframing:
+The default background of the game in general is a two-tone gradient dark on top fading out to the secondary color. 
 
-    Wireframes for this project were created using Balsamiq, for Small and Large viewports to show the difference between them detailing how the elements would react to
-    the size differences. Each element was structurally planned out at this stage and even during the physical build of the application there was not much deviation from the original
-    planning.
-    * Large device Wireframe for the Main menu Modal:
+`background: linear-gradient(to bottom, #000000 0%, #000000 21%, #00dde2 100%);` 3-stops were used in the two-tone gradient to allow the bleed-out of the darker of the two colors to happen at a
+predetermined point specified by myself @21% of the height of the total viewport height. 
     
-    <h1 align="center">
-        <img src="assets/uxd/skeletonPlane/Welcome-screen.png" alt="wireframe1" title="Welcome screen Wireframe" width="500" height="250">
-    </h1>
+##### 3. Logo:
+
+The logo was custom created by myself as a play on the game name of "KeyWord!". The plain vector of the key image with the cut-out "word" offset with transparency made for a slightly mechanically
+whimsical and fun feature to distinguish the game from a host of similar games in the real world marketplace. The logo was made in Microsoft Excel by importing a basic key vector and then overlaying
+shapes onto the vector in the Primary color. From their I used a textbox from Microsoft Excel with some basic font to create the "Word" in the Tertiary color and overlay onto the traced vector
+image. Finally the shapes and text were grouped together to flatten into one layer and then exported as a .png file to use within the project.
+
+This .png file was passed through TinyPNG.com resulting in the smallest possible size whilst maintaining the current high-res image and the original aspect ratio. The newly compressed .png file of
+the logo was saved into an "img" folder within the "assets" folder of the Project Directory where it can be accessed and utilised as part of the project.
+<h1 align="center">
+    <img src="https://github.com/auxfuse/Milestone2/blob/master/assets/img/keywordLogo.png" alt="KeyWord! Logo" width="96" height="96"/>
+</h1>
     
-    * Large device Wireframe for the Gameboard:
+##### 4. Geometry: 
+
+The prominent geometry of the game is square with rounded edges which are conceivable with the color scheme and the typography of the primary font. Each section of the game, whether that be
+Main Menu Modal, the Gameboard or the Game Over Modal are square with black backgrounds, and a primary color assigned to the borders to offset them against the gradient of the body.
+By using a common 2D shape for the main elements and components of the Game, it ensure a very easy solution and accompanying methodology approach to Mobile first design.
     
-    <h1 align="center">
-        <img src="assets/uxd/skeletonPlane/Game-screen.png" alt="Wireframe1A" title="Gameboard Wireframe" width="500" height="250">
-    </h1>
-    
-    * Mobile device Wireframe for the Main menu Modal:
-    
-    <h1 align="center">
-        <img src="assets/uxd/skeletonPlane/Welcome-screen-mobile.png" alt="wireframe2" title="Welcome screen Mobile Wireframe" width="150" height="300">
-    </h1>
-    
-    * Mobile device Wireframe for the Gameboard:
-    
-    <h1 align="center">
-        <img src="assets/uxd/skeletonPlane/Game-screen-mobile.png" alt="wireframe2A" title="Gameboard screen Mobile Wireframe" width="150" height="300">
-    </h1>
+##### 5. Wireframing:
+
+Wireframes for this project were created using Balsamiq, for Small and Large viewports to show the difference between them detailing how the elements would react to
+the size differences. Each element was structurally planned out at this stage and even during the physical build of the application there was not much deviation from the original
+planning.
+* Large device Wireframe for the Main menu Modal:
+
+<h1 align="center">
+    <img src="assets/uxd/skeletonPlane/Welcome-screen.png" alt="wireframe1" title="Welcome screen Wireframe" width="500" height="250">
+</h1>
+
+* Large device Wireframe for the Gameboard:
+
+<h1 align="center">
+    <img src="assets/uxd/skeletonPlane/Game-screen.png" alt="Wireframe1A" title="Gameboard Wireframe" width="500" height="250">
+</h1>
+
+* Mobile device Wireframe for the Main menu Modal:
+
+<h1 align="center">
+    <img src="assets/uxd/skeletonPlane/Welcome-screen-mobile.png" alt="wireframe2" title="Welcome screen Mobile Wireframe" width="150" height="300">
+</h1>
+
+* Mobile device Wireframe for the Gameboard:
+
+<h1 align="center">
+    <img src="assets/uxd/skeletonPlane/Game-screen-mobile.png" alt="wireframe2A" title="Gameboard screen Mobile Wireframe" width="150" height="300">
+</h1>
 
 ## Technology Used.
 
