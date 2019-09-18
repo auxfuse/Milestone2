@@ -162,7 +162,7 @@ This project incorporates the Bootstrap Framework and DoM manipulation to presen
 1. The applications header has two small functions that act rather similarly to each other. Although similar to each other, I decided to keep them both in at their current functionality as they both use different methods to apply the same effects on the application.
    * The logo is placed in the top-left position of the SPA as is customary with current branding conventions. The logo itself is wrapped in an anchor tag referenced to this page itself, thus acting as a <i>refresh</i>.
    * The <i>"Settings"</i> navigation link is to act as a computed refresh to call upon the main-menu to allow the user to change Theme or Difficulty mid-game reseting the timer and current score. This is achievable through a custom function which uses a built in method of the browser WebAPI to reload the current session from the browser rather than the cache:<br>
-```
+```javascript
 // Replay game function to refresh browser window.
 function replayGame() {
 
@@ -209,7 +209,7 @@ will alert them of their intention to do so directing them back to the Main-Menu
 
 #### Removed Features:
 * One feature that was originally in the application was to change the background image to the theme selected by the User. For example, if the User selected Pokemon the default-bg class on the body element would be replaced by a pre-existing CSS class of "pokemon-bg" which would be appended too the element via these code steps in the `setTheme` method in the `game` object:
-```
+```javascript
 // Loop through each item in the originalData and remove class name from the body to ensure background and wordLists selection update accordingly.
 // Without this step, the user could not reselect a previous theme to change the background as the class would not be removed from the body.
    game.originalData.forEach(item => document.body.classList.remove(`${item[0]}-bg`));
@@ -227,7 +227,9 @@ was fulfilled by myself by creating multiple scenarios for a particular session 
 * Loading the game and forcing browser refresh multiple times to try and capture any Fetch hangups.
 * Multi-click instance on several of the interactable elements.
 * Opening the application, and using the DevTools and setting breakpoints on the "if/else" functions to test for redundant instances of the logical conditions, an example would be adding a breakpoint and stepping
- through the code until the breakpoint was hit to ensure each step leading to the breakpoint functioned as expected, such as the gameClock method setting the parameter to True and then decrementing the game.time until it reached "0". Once "0" was hit would the Gameover modal display, if No then debug and rectify code when solved, if Yes, move on to next check (See image):
+ through the code until the breakpoint was hit to ensure each step of the code functioned as expected.
+ 
+    Such as the setting the breakpoint on the "else" block of code in the gameClock method to step through and watch the parameter update when the game.time property reached "0". Once "0" was hit would the Gameover modal display, if No then debug and rectify code when solved, if Yes, move on to next check (See image):
 <h1 align="center">
         <img src="assets/img/manualTestTimer.png" alt="Manual Testing Image" title="Manual Testing Image" width="600" height="300">
 </h1>
@@ -262,7 +264,7 @@ The project itself was posted to the Peer-Code-Review channel of the Code Instit
    When the user clicked on "start" in the Main-menu modal to start a game, the observer would detect the change in the modal DOM state and remove that class from the element thus making it visible again.
    * Another bug, more so considered a "Cheat" or "Hack" was the ability to quickly copy and paste the shown word into the user input to automatically pass the matchWord function validation. To compensate for this flaw,
    the html element for the shownWord was targetted via css and "user-select" property was set to "none". Code below:
-   ```
+   ```css
    .shown-word {
     font-size: 2.2rem;
     text-decoration: underline;
@@ -314,10 +316,14 @@ who was always available and very generous with his time whenever I had a questi
 
 3. To all in the #peer-code-review channel of Slack without whom, I would not have known of or been able to fix the abundant bugs and potential flaws, and for providing potential
 solutions to same:
-    * <a href="https://github.com/coderbeez">Edel O' Sullivan</a> & her son, Jack, for trialing the games effectiveness with kids!
-    * <a href="https://github.com/Eventyret">Simen Daehlin</a> for taking a lot of time to critique my project and provide solutions to same.
-    * <a href="https://github.com/JohnL3">John Long</a> for breaking my game and allowing me to learn about physical defensive design.
-    * <a href="https://github.com/AJGreaves">Anna Greaves</a> for always providing great feedback and friendship through Slack.
+
+    <img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord! Logo" width="16" height="16"><a href="https://github.com/coderbeez">Edel O' Sullivan</a> & her son, Jack, for trialing the games effectiveness with kids!
+    
+    <img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord! Logo" width="16" height="16"><a href="https://github.com/Eventyret">Simen Daehlin</a> for taking a lot of time to critique my project and provide solutions to same.
+    
+    <img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord! Logo" width="16" height="16"><a href="https://github.com/JohnL3">John Long</a> for breaking my game and allowing me to learn about physical defensive design.
+    
+    <img src="assets/img/keywordLogo.png" alt="logo" title="KeyWord! Logo" width="16" height="16"><a href="https://github.com/AJGreaves">Anna Greaves</a> for always providing great feedback and friendship through Slack.
     
 4. To my fellow students in Code Institute and to the staff and mentors who converse & frequent Slack regularly with their own queries/ideas & opinions, and assisting with mine, to help me better understand all facets of this course!
 
