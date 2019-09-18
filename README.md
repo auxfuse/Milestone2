@@ -3,27 +3,27 @@
 
 ## Table of Contents:
 
-* [What does it do and what does it need to fulfill?](#What_does_it_do_and_what_does_it_need_to_fulfill?)
+* [What does it do and what does it need to fulfill?](#what-does-it-do-and-what-does-it-need-to-fulfill)
 
-* [Functionality of Project](#Functionality_of_Project)
+* [Functionality of Project](#functionality-of-project)
 
-* [User Experience](#User_Experience)
-    * [User Stories](#User_Stories)
-    * [Design](#Design)
-        * [1. Font](#1._Font)
-        * [2. Color Scheme](#2._Color_Scheme)
-        * [3. Logo](#3._Logo)
-        * [4. Geometry](#4._Geometry)
-        * [5. Wireframing](#5._Wireframing)
-* [Technology Used](#Technology_Used.)
-* [Features](#Features.)
-    * [Future Features](#Futures_Features)
-    * [Removed Features](#Removed_Features)
-* [Testing](#Testing.)
-    * [Defensive Design](#Defensive_Design)
-* [Deployment](#Deployment.)
-* [Credits](#Credits.)
-    * [Special Thanks & Acknowledgements](#_Special_Thanks_&_Acknowledgements)
+* [User Experience](#user-experience)
+    * [User Stories](#user-stories)
+    * [Design](#design)
+        * [1. Font](#1-font)
+        * [2. Color Scheme](#2-color-scheme)
+        * [3. Logo](#3-logo)
+        * [4. Geometry](#4-geometry)
+        * [5. Wireframing](#5-wireframing)
+* [Technology Used](#technology-used)
+* [Features](#features)
+    * [Future Features](#futures-features)
+    * [Removed Features](#removed-features)
+* [Testing](#testing)
+    * [Defensive Design](#defensive-design)
+* [Deployment](#deployment)
+* [Credits](#credits)
+    * [Special Thanks & Acknowledgements](#special-thanks--acknowledgements)
 
 ***
 
@@ -49,7 +49,7 @@ I have obtained since the last Milestone submission, and is my own custom versio
 played as a child/young teen, (of which I can only vaguely remember now on our old family HP PC in the early 2000s and
 can't remember the name of).
 
-[Back to Top](#Table_of_Contents)
+[Back to Top](#table-of-contents) 
 
 ## User Experience.
 
@@ -158,7 +158,7 @@ planning.
     <img src="assets/uxd/skeletonPlane/Game-screen-mobile.png" alt="wireframe2A" title="Gameboard screen Mobile Wireframe" width="150" height="300">
 </h1>
 
-[Back to Top](#Table_of_Contents)
+[Back to Top](#table-of-contents)
 
 ## Technology Used.
 
@@ -184,7 +184,7 @@ size of same through small to large screen sizes.
 * <a href="https://validator.w3.org/">W3C HTML Validator</a> & <a href="https://validator.w3.org/">W3C CSS Validator</a> & <a href="https://jshint.com/">JSHint</a> ~ Used to check the validity and efficiency of my code.
 * <a href="https://autoprefixer.github.io/">Autoprefixer CSS Online</a> ~ Used to check for possible webkits required in the applications stylesheet ensuring Cross-browser support.
 
-[Back to Top](#Table_of_Contents)
+[Back to Top](#table-of-contents)
 
 ## Features.
 
@@ -249,7 +249,7 @@ will alert them of their intention to do so directing them back to the Main-Menu
 ``` 
 The above code has since been removed, but to see the affect it had on the project view this commit:<br><a href="https://github.com/auxfuse/Milestone2/tree/46a05bf07d6353d0d3c399f40f482220effc2366" target="_blank"><i>Commit ending in "fc2366"</i></a>
 
-[Back to Top](#Table_of_Contents)
+[Back to Top](#table-of-contents)
 
 ## Testing.
 
@@ -314,7 +314,7 @@ The project has a couple of remaining bugs found during extensive testing amongs
 * Internet Explorer will not recognise Arrow functions thus the game fails to properly load on that browser entirely.
 * Autofocus works well on the userInput in Google Chrome and the Opera browsers, however it does not work as expected on Microsoft Edge or Firefox.
 
-[Back to Top](#Table_of_Contents)
+[Back to Top](#table-of-contents)
 
 ## Deployment.
 This single-page application Game was developed in PyCharm IDE and version controlling was utilised via local (git) and online (github) repository
@@ -336,7 +336,7 @@ To clone the website:
 * Change the directory to where you want to clone the repository too. (In the case of PyCharm the directory path can be found through the <i>"Navigate"</i> tab).
 * Paste the Git URL copied from above and click <i>"Ok"</i>. (Again in the case of PyCharm once you click <i>"clone"</i>, Git Root mapping will be automatically set to the project Root directory).
 
-[Back to Top](#Table_of_Contents)
+[Back to Top](#table-of-contents)
 
 ## Credits.
 
@@ -370,4 +370,4 @@ solutions to same:
 
 ###### <i>Disclaimer: This project was created for educational use only as part of the Code Institute Full Stack Software Development Course for Milestone 2 Grading!</i>
 
-[Back to Top](#Table_of_Contents)
+[Back to Top](#table-of-contents)
